@@ -5,6 +5,6 @@ interface ILinkProps {
   children: string;
 }
 
-export const Link = ({ to, children }: ILinkProps) => {
-  return <styled.LinkStyled to={to}>{children}</styled.LinkStyled>;
-};
+export const Link = ({ to, children }: ILinkProps) => (
+  <styled.LinkStyled to={to}>{children}</styled.LinkStyled>
+);

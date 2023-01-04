@@ -1,3 +1,6 @@
+export { IconDivs } from "./IconDivs/index";
+export { ReverseDivAnimated } from "./DivAnimated";
+export { DivAnimated } from "./DivAnimated";
 export { Footer } from "./Footer";
 export { FormDashboard } from "./FormDashboard";
 export { Header } from "./Header";

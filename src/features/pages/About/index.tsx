@@ -3,6 +3,7 @@ import * as layouts from "../../layouts";
 
 import { motion } from "framer-motion";
 import { ListMedias } from "../../../components";
+import { listUser } from "../../database/User";
 
 export const About = () => {
   return (
@@ -21,7 +22,7 @@ export const About = () => {
         </styled.ObjectivesDiv>
 
         <motion.div>
-          <ListMedias />
+          <ListMedias list={listUser} />
         </motion.div>
       </styled.SectionInfos>
     </styled.Main>

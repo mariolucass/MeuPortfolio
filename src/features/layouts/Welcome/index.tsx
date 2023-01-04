@@ -1,24 +1,40 @@
-import { Avatar } from "@mui/material";
 import * as styled from "./styles";
+import * as layouts from "..";
+import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 
 export const Welcome = () => {
   return (
     <styled.WelcomeDiv>
-      <div>
-        <div>
-          <h1>Olá, sou Mário!</h1>
-        </div>
+      <layouts.ReverseDivAnimated />
 
-        <h2>Desenvolvedor Front-End com</h2>
-        <p>
-          Experiencia em React, JavaScript e procurando emprego na área de
-          front-end, busco superar obstaculos sempre com sede de conhecimento.
-        </p>
-      </div>
+      <motion.div className="container">
+        <motion.div className="textArea">
+          <motion.div className="principalName">
+            <motion.h1>
+              Olá, eu sou o
+              <TypeAnimation
+                sequence={[` Mario!`, 200, ""]}
+                speed={10}
+                wrapper="span"
+                repeat={Infinity}
+              />
+            </motion.h1>
+          </motion.div>
 
-      <div>
-        <Avatar sx={{ width: 256, height: 256 }} />
-      </div>
+          <motion.h2>Desenvolvedor Front-End.</motion.h2>
+
+          <motion.p>
+            Experiência em React, JavaScript e procurando emprego na área de
+            Front-End, tenho como objetivo superar obstáculos, adquirir
+            conhecimentos e resolver problemas.
+          </motion.p>
+        </motion.div>
+
+        <layouts.IconDivs />
+      </motion.div>
+
+      <layouts.DivAnimated />
     </styled.WelcomeDiv>
   );
 };

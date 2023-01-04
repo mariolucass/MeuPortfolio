@@ -8,22 +8,25 @@ export const Main = styled(motion.main)`
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 
   section {
     width: 100%;
     margin: 0 auto;
     height: 550px;
     display: flex;
+    overflow-x: hidden;
 
     div {
       padding: 1em;
       width: 50%;
     }
 
-    .link {
+    .info {
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
     }
 
     .message {
@@ -46,27 +49,26 @@ export const Main = styled(motion.main)`
         text-align: center;
         /* bottom: 0%; */
 
-        height: 35%;
+        height: 20%;
         width: 45%;
         background-color: var(--secondary-color);
-        /* border-radius: 0.7em; */
+        border-radius: 0.7em 0.7em 0em 0em;
       }
     }
   }
 `;
 
 export const SectionAbout = styled(motion.section)`
+  background-color: var(--secondary-color);
   .information {
     width: 50%;
     height: 100%;
-    background-color: var(--secondary-color);
   }
 
-  div {
+  .greetings {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--grey3-color);
   }
 `;
 
@@ -78,16 +80,13 @@ export const SectionTechs = styled(motion.section)`
     rgba(29, 59, 54, 1) 100%
   );
 
-  div {
-    margin-right: 10%;
-  }
-
   .message {
     background-image: url(${techs});
+    margin-left: 2.5%;
 
-    div {
+    /* div {
       left: 30%;
-    }
+    } */
   }
 `;
 
@@ -99,34 +98,22 @@ export const SectionProjects = styled(motion.section)`
     rgba(14, 15, 14, 1) 100%
   );
 
-  div {
-    margin-left: 10%;
-  }
-
   .message {
     background-image: url(${projects});
+    margin-right: 2.5%;
 
-    div {
+    /* div {
       right: 30%;
-    }
+    } */
   }
 `;
 
-export const SectionEmail = styled(motion.section)`
+export const SectionForm = styled(motion.section)`
   background-color: var(--grey-color);
 
-  div {
+  .greetings {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    form {
-      height: 90%;
-      width: 45em;
-      background-color: var(--grey1-color);
-      border-radius: 1em;
-      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-        rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    }
   }
 `;
