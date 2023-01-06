@@ -8,19 +8,17 @@ interface IListMedias {}
 export const ListMedias = ({ list }: any) => {
   const liMedia = list.map((elem: any) => (
     <motion.li key={elem.id}>
-      <Avatar src={elem.img} sx={{ width: 256, height: 256 }} />
-
       <motion.div className="social">
         <motion.a href={elem.linkedin} target="_blank">
-          <AiFillLinkedin size={50} />
+          <AiFillLinkedin style={{ color: "var(--white-color)" }} size={50} />
         </motion.a>
 
         <motion.a href={elem.github} target="_blank">
-          <AiFillGithub size={50} />
+          <AiFillGithub size={50} style={{ color: "var(--white-color)" }} />
         </motion.a>
       </motion.div>
     </motion.li>
   ));
 
-  return <styled.MediaUl>{liMedia}</styled.MediaUl>;
+  return <styled.MediaUl className="listMedias">{liMedia}</styled.MediaUl>;
 };

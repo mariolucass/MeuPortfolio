@@ -7,9 +7,9 @@ interface IProps {
 
 const typeButton = {
   primary: css`
-    width: 40%;
-    height: 60px;
-    font-size: 20px;
+    width: 72px;
+    height: 72px;
+    font-size: 32px;
 
     background-color: var(--button-color);
     color: var(--white-color);

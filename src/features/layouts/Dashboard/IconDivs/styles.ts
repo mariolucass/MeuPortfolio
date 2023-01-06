@@ -1,25 +1,25 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const DivIcon = styled(motion.div)`
+export const PrincipalDiv = styled(motion.div)`
   width: 40%;
   margin: 3.5% 0;
   display: flex;
   align-items: center;
   justify-content: center;
+`;
 
-  .divIcon {
-    height: 259px;
-    width: 259px;
-    border-radius: 5em;
-    background-color: var(--grey1-color);
+export const DivIcon = styled(motion.div)`
+  height: 259px;
+  width: 259px;
+  border-radius: 6em;
+  background-color: var(--grey1-color);
 
-    .icon {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border-radius: 6em;
-    }
+  .icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 6em;
   }
 `;
 

@@ -7,7 +7,6 @@ export const RoutesMain = () => (
       <Route path="/" element={<pages.Dashboard />}></Route>
       <Route path="/techs" element={<pages.Technologies />}></Route>
       <Route path="/projects" element={<pages.Projects />}></Route>
-      <Route path="/about" element={<pages.About />}></Route>
     </Routes>
   </>
 );

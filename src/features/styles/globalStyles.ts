@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 
 :root{
     --primary-color:#1d3b36;
+    
     --primary25-color: #1d3b3625; 
 
     --secondary-color: #2C5952;
@@ -29,6 +30,12 @@ export const GlobalStyle = createGlobalStyle`
     --button-color: #70E6D2;
     --buttonHover-color: #6AD9C6;
     --buttonActive-color: #5EBFAF;
+
+    --toastify-font-family: 'Inter', sans-serif;
+    --toastify-color-progress-info: var(--primary-color);
+    --toastify-spinner-color: var(--primary-color);
+
+    --font: 'Inter', sans-serif
 }
 
 * {
@@ -45,7 +52,8 @@ body {
     width: 100%;
     height: 100vh;
     overflow: overlay;
-    font-family: 'Noto Sans', sans-serif;
+    /* font-family: 'Noto Sans', sans-serif; */
+    font-family: var(--font);
     background-color: var(--black-color);
 }
 
@@ -57,7 +65,27 @@ a {
 h1,h2,h3 {
     color: var(--text-color);
     font-weight: bold;
-    font-family: 'Noto Sans', sans-serif;
+    /* font-family: 'Noto Sans', sans-serif; */
 }
+
+button, a {
+    font-family: var(--font);
+}
+
+input{
+    ::placeholder{
+        font-family: var(--font);
+    }
+}
+
+h4 {
+    color:var(--secondary-color)
+}
+
+p {
+    color: var(--paragraph-color)
+}
+
+
 
 `;

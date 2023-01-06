@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { IChildren } from "../../features/interfaces/global/globalInterfaces";
 import { ITechContext } from "../../features/interfaces/contexts/TechContext.interface";
@@ -7,6 +7,8 @@ export const TechContext = createContext<ITechContext>({} as ITechContext);
 
 export const TechProvider = ({ children }: IChildren) => {
   const [technologies, setTechnologies] = useState([]);
+
+  useEffect(() => {});
 
   return (
     <TechContext.Provider value={{ technologies, setTechnologies }}>

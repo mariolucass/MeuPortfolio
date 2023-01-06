@@ -1,9 +1,12 @@
-export { IconDivs } from "./IconDivs/index";
-export { ReverseDivAnimated } from "./DivAnimated";
-export { DivAnimated } from "./DivAnimated";
-export { Footer } from "./Footer";
-export { FormDashboard } from "./FormDashboard";
-export { Header } from "./Header";
-export { Images } from "./ImageList";
-export { Loading } from "./Loading";
-export { Welcome } from "./Welcome";
+export { Footer } from "./Global/Footer";
+export { Header } from "./Global/Header";
+export { Loading } from "./Global/Loading";
+
+export { IconDivs } from "./Dashboard/IconDivs/index";
+export { ReverseDivAnimated } from "./Dashboard/DivAnimated";
+export { DivAnimated } from "./Dashboard/DivAnimated";
+export { FormDashboard } from "./Dashboard/FormDashboard";
+export { Images } from "./Dashboard/ImageList";
+export { Welcome } from "./Dashboard/Welcome";
+export { AboutParticulars } from "./Dashboard/AboutParticulars";
+export { AboutInfo } from "./Dashboard/AboutInfo";
