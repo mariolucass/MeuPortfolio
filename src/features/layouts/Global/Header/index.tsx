@@ -1,27 +1,24 @@
 import * as styled from "./styles";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import Logo from "../../../../assets/logo.png";
 
 export const Header = () => (
   <styled.Nav>
     <styled.LogoDiv whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-      <Link to={"/"}>
+      <styled.LinkStyled to={"/"}>
         <motion.img src={Logo} />
-      </Link>
+      </styled.LinkStyled>
     </styled.LogoDiv>
 
     <motion.div>
       <motion.ul>
         <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <Link to={"/projects"}>Projetos</Link>
-
+          <styled.LinkStyled to={"/projects"}>Projetos</styled.LinkStyled>
           <motion.div />
         </motion.li>
 
         <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <Link to={"/techs"}>Tecnologias</Link>
-
+          <styled.LinkStyled to={"/techs"}>Tecnologias</styled.LinkStyled>
           <motion.div />
         </motion.li>
       </motion.ul>

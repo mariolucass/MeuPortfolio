@@ -1,9 +1,7 @@
 import * as styled from "./styles";
-import { Avatar } from "@mui/material";
 import { motion } from "framer-motion";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-
-interface IListMedias {}
+import { IListMedias } from "../../features/interfaces/components/ListMedias";
 
 export const ListMedias = ({ list }: any) => {
   const liMedia = list.map((elem: any) => (

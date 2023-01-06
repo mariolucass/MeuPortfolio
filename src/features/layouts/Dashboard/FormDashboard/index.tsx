@@ -1,13 +1,10 @@
 import * as styled from "./styles";
+import * as components from "../../../../components";
 import * as validations from "../../../validations";
+import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Input } from "../../../../components/Inputs";
-import { motion } from "framer-motion";
-import { Button } from "../../../../components/Buttons";
 import { RiSendPlaneFill, RiFeedbackLine } from "react-icons/ri";
-
-import { VscFeedback } from "react-icons/vsc";
 
 export const FormDashboard = () => {
   const {
@@ -28,29 +25,29 @@ export const FormDashboard = () => {
         <motion.h2>Feedbacks</motion.h2>
       </motion.div>
 
-      <Input
+      <components.Input
         type="text"
         id="email"
         placeholder="Coloque se e-mail aqui."
         register={register}
       >
         E-mail
-      </Input>
+      </components.Input>
       {errors.email && <motion.span></motion.span>}
 
-      <Input
+      <components.Input
         type="text"
         id="name"
         placeholder="Coloque sua mensagem aqui."
         register={register}
       >
         Mensagem
-      </Input>
+      </components.Input>
       {errors.name && <motion.span></motion.span>}
 
-      <Button type="submit">
+      <components.Button type="submit">
         <RiSendPlaneFill />
-      </Button>
+      </components.Button>
     </styled.Form>
   );
 };

@@ -1,17 +1,13 @@
-import * as layouts from "../../layouts";
 import * as styled from "./styles";
+import * as layouts from "../../layouts";
 import * as components from "../../../components";
-import { motion, useInView, useScroll, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
+import * as databases from "../../database";
 import * as framerStyles from "../../libs/FramerMotion/styles";
 import Profile from "../../../assets/profile.jpeg";
-import { Techs } from "../../database/Techs";
-import { Projects } from "../../database/Projects";
-import { useLoadingContext } from "../../../context/LoadingContext/LoadingContext";
-import { listUser } from "../../database/User";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 export const Dashboard = () => {
-  const { loading } = useLoadingContext();
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
@@ -27,14 +23,16 @@ export const Dashboard = () => {
       <layouts.Welcome />
 
       <styled.SectionAbout>
-        <motion.div className="avatar">
+        <motion.div className="profile">
           <motion.img src={Profile} alt="Profile" />
         </motion.div>
 
         <motion.div className="biography">
           <motion.div className="textArea">
             <layouts.AboutInfo />
-            <components.ListMedias list={listUser} />
+            <components.ListMedias list={databases.Users} />
+
+            <motion.a className="link">Meu Curriculo</motion.a>
 
             <layouts.AboutParticulars />
           </motion.div>
@@ -42,67 +40,45 @@ export const Dashboard = () => {
       </styled.SectionAbout>
 
       <styled.SectionTechs ref={ref1}>
-        <motion.div
-          className="message"
-          style={
-            isInView1 ? framerStyles.style2Hidden : framerStyles.style2Show
-          }
-        ></motion.div>
+        <motion.div className="message">
+          <layouts.AnimatedText text="Habilidades" inView={isInView1} />
+        </motion.div>
 
         <motion.div
           className="info"
-          style={
-            isInView1 ? framerStyles.style1Hidden : framerStyles.style1Show
-          }
+          style={isInView1 ? framerStyles.styleHidden : framerStyles.style1Show}
         >
-          <motion.div>
-            <motion.h2>Minha habilidades.</motion.h2>
-          </motion.div>
+          <layouts.Images list={databases.Techs} />
 
-          <layouts.Images list={Techs} />
-
-          <components.Link to={"/techs"}>Tecnologias</components.Link>
+          <components.Link to={"/techs"}>Habilidades</components.Link>
         </motion.div>
       </styled.SectionTechs>
 
       <styled.SectionProjects ref={ref2}>
         <motion.div
           className="info"
-          style={
-            isInView2 ? framerStyles.style2Hidden : framerStyles.style2Show
-          }
+          style={isInView2 ? framerStyles.styleHidden : framerStyles.style2Show}
         >
-          <layouts.Images list={Projects} />
+          <layouts.Images list={databases.Projects} />
 
           <components.Link to={"/projects"}>Projetos</components.Link>
         </motion.div>
 
-        <motion.div
-          className="message"
-          style={
-            isInView2 ? framerStyles.style1Hidden : framerStyles.style1Show
-          }
-        >
-          <motion.div>
-            <motion.h2>Meus projetos.</motion.h2>
-          </motion.div>
+        <motion.div className="message">
+          <layouts.AnimatedText text="Projetos" inView={isInView2} />
         </motion.div>
       </styled.SectionProjects>
 
       <styled.SectionForm ref={ref3}>
         <motion.div
           className="formDiv"
-          style={
-            isInView3 ? framerStyles.style3Hidden : framerStyles.style3Show
-          }
+          style={isInView3 ? framerStyles.styleHidden : framerStyles.style3Show}
         >
           <layouts.FormDashboard />
         </motion.div>
         <motion.div
           className="greetings"
-          style={
-            isInView3 ? framerStyles.style3Hidden : framerStyles.style3Show
-          }
+          style={isInView3 ? framerStyles.styleHidden : framerStyles.style3Show}
         >
           <motion.h2>Gostaria de me mandar um feedback? Aqui está...</motion.h2>
         </motion.div>

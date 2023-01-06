@@ -1,4 +1,11 @@
-export { ListProjects } from "./ListProjects";
-export { Search } from "./Search";
-export { ListMedias } from "./ListMedias";
+export { Button } from "./Buttons";
+
+export { Input } from "./Inputs";
+
 export { Link } from "./Links";
+
+export { ListMedias } from "./ListMedias";
+
+export { ListProjects } from "./ListProjects";
+
+export { ListTechs } from "./ListTechs";

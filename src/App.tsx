@@ -1,14 +1,12 @@
+import * as routes from "./features/routes/routes";
 import { ToastContainer } from "react-toastify";
-import { RoutesMain } from "./features/routes/routes";
 import { GlobalStyle } from "./features/styles/globalStyles";
 import "react-toastify/dist/ReactToastify.css";
 
-const App = () => (
+export const App = () => (
   <>
     <ToastContainer />
     <GlobalStyle />
-    <RoutesMain />
+    <routes.RoutesMain />
   </>
 );
-
-export default App;

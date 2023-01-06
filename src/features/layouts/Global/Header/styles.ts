@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
@@ -23,11 +24,6 @@ export const Nav = styled(motion.nav)`
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-
-      a {
-        color: var(--tertiary-color);
-        font-weight: 600;
-      }
 
       div {
         margin-top: 2px;
@@ -60,4 +56,9 @@ export const LogoDiv = styled(motion.div)`
     height: 100%;
     object-fit: cover;
   }
+`;
+
+export const LinkStyled = styled(Link)`
+  color: var(--tertiary-color);
+  font-weight: 600;
 `;

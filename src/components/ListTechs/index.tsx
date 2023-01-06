@@ -1,17 +1,8 @@
 import * as styled from "./styles";
 import { motion } from "framer-motion";
+import { IListTechs } from "../../features/interfaces/components/ListHabilities";
 
-interface ICardTechs {
-  img: string;
-  title: string;
-  description: string;
-}
-
-interface IListTechs {
-  list: ICardTechs[];
-}
-
-export const CardTechs = ({ list }: IListTechs) => {
+export const ListTechs = ({ list }: IListTechs) => {
   const liTechs = list.map((item) => (
     <motion.li>
       <motion.div>

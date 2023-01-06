@@ -1,13 +1,5 @@
-import { UseFormRegister } from "react-hook-form";
 import * as styled from "./styles";
-
-interface IInputProps {
-  type: string;
-  placeholder: string;
-  children: string;
-  id: "email" | "name";
-  register: UseFormRegister<any>;
-}
+import { IInputProps } from "../../features/interfaces/components/Input";
 
 export const Input = ({
   type,

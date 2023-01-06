@@ -9,7 +9,6 @@ export const Projects = () => {
     <styled.Main>
       <layouts.Header />
       {loading ? <layouts.Loading /> : <layouts.Welcome />}
-      <ul></ul>
     </styled.Main>
   );
 };

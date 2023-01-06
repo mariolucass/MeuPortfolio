@@ -12,9 +12,30 @@ export const WelcomeDiv = styled(motion.div)`
   margin: 0 auto;
   border-radius: 0.5em;
   height: 100%;
+  /* background-image: linear-gradient(
+    to left bottom,
+    #70e6d2,
+    #5ab8a8,
+    #448c80,
+    #30625a,
+    #1d3b36
+  ); */
 
-  .textArea {
-  }
+  background-image: linear-gradient(
+    to left bottom,
+    #70e6d2,
+    #6cdfcb,
+    #69d7c5,
+    #65d0be,
+    #62c9b8,
+    #5cbdad,
+    #57b0a2,
+    #51a497,
+    #479185,
+    #3e7d74,
+    #356b63,
+    #2c5952
+  );
 `;
 
 export const ContainerDiv = styled(motion.div)`

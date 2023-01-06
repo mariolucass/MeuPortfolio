@@ -1,3 +1,5 @@
+import * as transitions from "./transitions";
+
 export const iconVariants = {
   tap: {
     scale: 0.95,
@@ -17,5 +19,25 @@ export const iconVariants = {
 
   hover: {
     scale: 1.005,
+  },
+};
+
+export const textVariant = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: transitions.transitionText,
+  },
+};
+
+export const letterVariant = {
+  hidden: {
+    opacity: 0,
+    y: `0.5em`,
+  },
+  visible: {
+    opacity: 1,
+    y: `0em`,
+    transition: transitions.transitionLetter,
   },
 };

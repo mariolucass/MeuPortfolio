@@ -1,5 +1,7 @@
 import * as styled from "./styles";
 import * as layouts from "../..";
+import * as transitions from "../../../libs/FramerMotion/transitions";
+import * as animations from "../../../libs/FramerMotion/animations";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
@@ -10,29 +12,17 @@ export const Welcome = () => {
 
       <styled.ContainerDiv>
         <styled.TextDiv
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            default: {
-              duration: 0.3,
-              ease: [0, 0.71, 0.2, 1.01],
-            },
-            scale: {
-              type: "spring",
-              damping: 4,
-              stiffness: 100,
-              restDelta: 0.001,
-            },
-          }}
+          initial={animations.animateHidden}
+          animate={animations.animateShowing}
+          transition={transitions.transitionSpring}
         >
           <motion.div className="principalName">
             <motion.h1>
               Olá, eu sou o
               <TypeAnimation
-                sequence={[` Mario!`, 200, ""]}
+                sequence={[` Mário!`, 200]}
                 speed={10}
                 wrapper="span"
-                repeat={Infinity}
               />
             </motion.h1>
           </motion.div>

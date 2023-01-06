@@ -1,24 +1,28 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
+
 import { IChildren } from "../../features/interfaces/global/globalInterfaces";
+import { ILoadingContext } from "../../features/interfaces/contexts/LoadingContext";
 
 export const LoadingContext = createContext<ILoadingContext>(
   {} as ILoadingContext
 );
-interface ILoadingContext {
-  loading: boolean;
-  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
-}
 
 export const LoadingProvider = ({ children }: IChildren) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [loader, setLoader] = useState(false);
 
-  useState(() => {
+  useEffect(() => {
     setTimeout(() => {
       setLoading((loading) => !loading);
     }, 100);
-  });
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading((loading) => !loading);
+    }, 100);
+  }, [loader]);
 
   return (
     <LoadingContext.Provider value={{ loading, setLoading }}>

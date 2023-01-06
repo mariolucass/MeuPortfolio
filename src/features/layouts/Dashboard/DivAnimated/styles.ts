@@ -6,8 +6,6 @@ import ReverseWave from "../../../../assets/waveReverse.svg";
 export const Div = styled(motion.div)`
   width: 100%;
   height: 200px;
-
-  /* margin-bottom: 10%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,8 +31,6 @@ export const Div = styled(motion.div)`
 export const ReverseDiv = styled(motion.div)`
   width: 100%;
   height: 200px;
-
-  /* margin-bottom: 10%; */
   display: flex;
   justify-content: center;
   align-items: center;

@@ -7,7 +7,7 @@ export const variants = {
   },
 };
 
-export const style1Hidden = {
+export const styleHidden = {
   transform: "none",
   opacity: 1,
   transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
@@ -19,21 +19,9 @@ export const style1Show = {
   transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 };
 
-export const style2Hidden = {
-  transform: "none",
-  opacity: 1,
-  transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-};
-
 export const style2Show = {
   transform: "translateX(-200px)",
   opacity: 0,
-  transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-};
-
-export const style3Hidden = {
-  transform: "none",
-  opacity: 1,
   transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 };
 

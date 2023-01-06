@@ -1,8 +1,9 @@
 import * as styled from "./styles";
+import { motion } from "framer-motion";
 
 export const Footer = () => (
   <styled.Footer>
-    <div></div>
-    <div></div>
+    <motion.div></motion.div>
+    <motion.div></motion.div>
   </styled.Footer>
 );

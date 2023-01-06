@@ -1,6 +1,6 @@
+import * as styled from "./styles";
 import { motion } from "framer-motion";
 import { VscActivateBreakpoints } from "react-icons/vsc";
-import * as styled from "./styles";
 
 export const AboutParticulars = () => {
   const list = ["Foco", "Dedicação", "Organização", "Comunicação"];

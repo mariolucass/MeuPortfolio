@@ -1,17 +1,6 @@
 import * as styled from "./styles";
 import { motion } from "framer-motion";
-
-interface ICardProject {
-  img: string;
-  title: string;
-  description: string;
-  vercel: string;
-  github: string;
-}
-
-interface IListProject {
-  list: ICardProject[];
-}
+import { IListProject } from "../../features/interfaces/components/ListProjects";
 
 export const ListProjects = ({ list }: IListProject) => {
   const liProjects = list.map((item) => (
