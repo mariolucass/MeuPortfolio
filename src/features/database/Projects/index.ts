@@ -1,12 +1,11 @@
-import KenzieHub from "../../../assets/KenzieHub.png";
-import RentalWife from "../../../assets/RentalWife.png";
-import NuKenzie from "../../../assets/NuKenzie.png";
-
+import { IProject } from "./../../interfaces/components/ListProjects";
 export const Projects = [
-  { name: "KenzieHub", img: KenzieHub },
+  { name: "KenzieHub", img: " " },
   {
     name: "RentalWife",
-    img: RentalWife,
+    img: " ",
   },
-  { name: "NuKenzie", img: NuKenzie },
+  { name: "NuKenzie", img: " " },
 ];
+
+const ProjectsDatabase: Array<IProject> = [];

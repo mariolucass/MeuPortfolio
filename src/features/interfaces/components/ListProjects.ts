@@ -1,4 +1,4 @@
-export interface ICardProject {
+export interface IProject {
   img: string;
   title: string;
   description: string;
@@ -7,5 +7,5 @@ export interface ICardProject {
 }
 
 export interface IListProject {
-  list: ICardProject[];
+  list: IProject[];
 }

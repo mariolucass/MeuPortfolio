@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
+import Languages from "../../../assets/images/backgrounds/languages.jpg";
+import Projects from "../../../assets/images/backgrounds/projects.jpg";
+import Contacts from "../../../assets/images/backgrounds/contacts.jpg";
+
 export const Main = styled(motion.main)`
   width: 100%;
   min-height: 100%;
@@ -23,30 +27,31 @@ export const Main = styled(motion.main)`
     div {
       display: flex;
       width: 50%;
-      padding: 1em;
     }
 
     .info {
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      padding: 1em;
     }
 
     .message {
-      padding-bottom: 0px;
-
+      height: 100%;
       align-items: center;
       justify-content: center;
 
       background-repeat: no-repeat;
       background-position: center;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
 
-      border-radius: 0.5em;
+      h2 {
+        height: 8%;
+      }
 
       div {
-        height: 20%;
+        height: 10%;
         width: 45%;
         padding: 1.5em;
         bottom: 0%;
@@ -77,16 +82,14 @@ export const SectionAbout = styled(motion.section)`
   }
 
   .listMedias {
-    left: 33%;
-    bottom: 44%;
-
-    position: relative;
+    position: sticky;
     flex-direction: row;
   }
 
   .biography {
     width: 70%;
     height: 100%;
+    padding: 1em;
 
     padding-top: 3em;
     gap: 3.5rem;
@@ -94,19 +97,18 @@ export const SectionAbout = styled(motion.section)`
     background-color: var(--grey-color);
 
     align-items: left;
+    flex-direction: row;
     justify-content: flex-start;
     text-align: left;
 
     border-left: 0.5em solid var(--secondary-color);
-    border-bottom: 0.5em solid var(--secondary-color);
+    /* border-bottom: 0.5em solid var(--secondary-color); */
 
     .textArea {
-      gap: 2em;
+      width: 40%;
+      gap: 1em;
 
       h2 {
-        width: 45%;
-        height: 10%;
-
         padding: 0.4em;
         padding-top: 0.8em;
         padding-bottom: 0;
@@ -116,13 +118,14 @@ export const SectionAbout = styled(motion.section)`
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
+        gap: 1rem;
 
         background-color: var(--primary-color);
 
         div {
           height: 10px;
-          width: 105%;
-
+          width: 100%;
+          border-radius: 1em 1em 0 0;
           padding: 0;
 
           background-color: var(--secondary-color);
@@ -130,28 +133,73 @@ export const SectionAbout = styled(motion.section)`
       }
 
       p {
-        width: 45%;
+        width: 98%;
+        max-height: 500px;
         text-align: justify;
+
+        @media (max-width: 1200px) {
+          width: 75%;
+        }
+      }
+
+      .mediaArea {
+        width: 100%;
+        height: 12%;
+        align-items: flex-end;
+        padding: 2px;
+        padding: 1em;
+        /* border-right: 3px solid var(--primary-color); */
+        /* border-bottom: 3px solid var(--primary-color); */
+
+        .link {
+          background-color: var(--button-color);
+          width: 32%;
+          height: 64px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 2px solid transparent;
+          border-radius: 0.3em;
+          font-weight: bold;
+          padding: 1em;
+
+          :hover {
+            background-color: var(--buttonHover-color);
+          }
+
+          :active {
+            background-color: var(--buttonActive-color);
+          }
+        }
       }
     }
 
-    .link {
-      background-color: var(--button-color);
-      width: 50%;
-      height: 64px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid transparent;
-      border-radius: 0.3em;
-      font-weight: bold;
+    .particularsArea {
+      width: 40%;
+      gap: 2em;
 
-      :hover {
-        background-color: var(--buttonHover-color);
-      }
+      h2 {
+        padding: 0.4em;
+        padding-top: 0.8em;
+        padding-bottom: 0;
+        border-radius: 1em 1em 0 0;
 
-      :active {
-        background-color: var(--buttonActive-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+
+        background-color: var(--primary-color);
+
+        div {
+          height: 10px;
+          width: 100%;
+          border-radius: 1em 1em 0 0;
+          padding: 0;
+
+          background-color: var(--secondary-color);
+        }
       }
     }
   }
@@ -178,6 +226,11 @@ export const SectionTechs = styled(motion.section)`
     rgba(29, 59, 54, 1) 0%,
     rgba(14, 15, 14, 1) 100%
   );
+
+  .message {
+    background-image: linear-gradient(#2c595290, #2c595290, #2c595290),
+      url(${Languages});
+  }
 `;
 
 export const SectionProjects = styled(motion.section)`
@@ -188,26 +241,20 @@ export const SectionProjects = styled(motion.section)`
     rgba(14, 15, 14, 1) 0%,
     rgba(29, 59, 54, 1) 100%
   );
+
+  .message {
+    background-image: linear-gradient(#2c595290, #2c595290, #2c595290),
+      url(${Projects});
+  }
 `;
 
 export const SectionForm = styled(motion.section)`
   height: 1000px;
   background-color: var(--primary-color);
+  align-items: center;
 
-  .greetings {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .formDiv {
-    min-height: 100%;
-    width: 50%;
-
-    justify-content: flex-end;
-    align-items: center;
-
-    flex-direction: column;
-
-    background-color: var(--primary-color);
+  .message {
+    background-image: linear-gradient(#2c595290, #2c595290, #2c595290),
+      url(${Contacts});
   }
 `;

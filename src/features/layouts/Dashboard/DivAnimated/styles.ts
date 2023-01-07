@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import Wave from "../../../../assets/wave.svg";
-import ReverseWave from "../../../../assets/waveReverse.svg";
+import Wave from "../../../../assets/images/backgrounds/wave.svg";
+import ReverseWave from "../../../../assets/images/backgrounds/waveReverse.svg";
 
 export const Div = styled(motion.div)`
   width: 100%;

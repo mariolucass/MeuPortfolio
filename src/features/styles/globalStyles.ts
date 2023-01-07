@@ -4,21 +4,48 @@ export const GlobalStyle = createGlobalStyle`
 
 :root{
     --primary-color:#1d3b36;
-    
     --primary25-color: #1d3b3625; 
 
     --secondary-color: #2C5952;
     --secondary75-color: #2C595275;
+
+    /* --secondary-color: #97B1AB; */
+    /* --secondary75-color:##97B1AB75; */
+
+    /* --secondary-color: #415F5A;
+    --secondary75-color:#415F5A75; */
     
 
-    --tertiary-color:#5EBFAF ;
+    --tertiary-color:#5EBFAF;
+
+    /* --tertiary-color:#668680; */
+  
+    /* --tertiary-color:#637C77 ; */
+
+    
 
     --quaternary-color: #6AD9C6;
 
+    /* --quaternary-color:#8EAFA9; */
+   
+    /* --quaternary-color:#2B3648; */
+
+ 
+
+
     --quinary-color: #70E6D2;
+
+    /* --quinary-color:#B8DAD3; */
+
+    /* --quinary-color:#596579; */
+
+    ///////
+    ///////
+    ///////
 
     --white-color: #ffffff;
     --black-color: #000000;
+
     --grey-color: #0e0f0e;
     --grey1-color: #0e0f0e;
 
@@ -27,15 +54,23 @@ export const GlobalStyle = createGlobalStyle`
     --text-color: #fefefd;
     --paragraph-color: #7f7f7f;
 
-    --button-color: #70E6D2;
-    --buttonHover-color: #6AD9C6;
-    --buttonActive-color: #5EBFAF;
+    ///////
+    ///////
+    ///////
+
+    --button-color:#596579;
+    --buttonHover-color:#2B3648;
+    --buttonActive-color: #637C77;
+
+    ///////
+    ///////
+    ///////
 
     --toastify-font-family: 'Inter', sans-serif;
     --toastify-color-progress-info: var(--primary-color);
     --toastify-spinner-color: var(--primary-color);
 
-    --font: 'Inter', sans-serif
+    --font: 'Inter', sans-serif;
 }
 
 * {
@@ -64,9 +99,8 @@ a {
 }
 
 h1,h2,h3 {
-
     color: var(--text-color);
-    font-weight: bold;
+    font-weight: bold; 
 }
 
 h4 {
@@ -75,6 +109,11 @@ h4 {
 
 p {
     color: var(--paragraph-color)
+}
+
+.highFont {
+    font-family: Ade-Display, sans-serif;
+    letter-spacing: .7rem;
 }
 
 button, a{

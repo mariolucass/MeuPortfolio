@@ -12,16 +12,16 @@ export const WelcomeDiv = styled(motion.div)`
   margin: 0 auto;
   border-radius: 0.5em;
   height: 100%;
-  /* background-image: linear-gradient(
+  background-image: linear-gradient(
     to left bottom,
     #70e6d2,
     #5ab8a8,
     #448c80,
     #30625a,
     #1d3b36
-  ); */
+  );
 
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to left bottom,
     #70e6d2,
     #6cdfcb,
@@ -35,13 +35,34 @@ export const WelcomeDiv = styled(motion.div)`
     #3e7d74,
     #356b63,
     #2c5952
-  );
+  ); */
+
+  /* background-image: linear-gradient(
+    to bottom,
+    #1d3b36,
+    #314f4a,
+    #45645e,
+    #5a7a74,
+    #70908a,
+    #70908a,
+    #70908a,
+    #70908a,
+    #5a7a74,
+    #45645e,
+    #314f4a,
+    #1d3b36
+  ); */
 `;
 
 export const ContainerDiv = styled(motion.div)`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 1200px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const TextDiv = styled(motion.div)`
@@ -73,7 +94,7 @@ export const TextDiv = styled(motion.div)`
     text-align: center;
     padding: 0.7em;
     width: 35%;
-    height: 210px;
+    min-height: 50%;
     border-radius: 0.7em;
     background-color: var(--grey-color);
     border-radius: 0 0 1.5em 1.5em;
@@ -85,10 +106,14 @@ export const TextDiv = styled(motion.div)`
     p {
       margin-top: 0.4em;
       color: var(--paragraph-color);
-      font-size: 20px;
+      font-size: 1rem;
     }
 
     span {
     }
+  }
+
+  @media (max-width: 1200px) {
+    width: 100%;
   }
 `;
