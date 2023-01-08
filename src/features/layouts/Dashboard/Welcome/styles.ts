@@ -11,7 +11,7 @@ export const WelcomeDiv = styled(motion.div)`
   justify-content: center;
   margin: 0 auto;
   border-radius: 0.5em;
-  height: 100%;
+  height: 95vh;
   background-image: linear-gradient(
     to left bottom,
     #70e6d2,
@@ -20,38 +20,6 @@ export const WelcomeDiv = styled(motion.div)`
     #30625a,
     #1d3b36
   );
-
-  /* background-image: linear-gradient(
-    to left bottom,
-    #70e6d2,
-    #6cdfcb,
-    #69d7c5,
-    #65d0be,
-    #62c9b8,
-    #5cbdad,
-    #57b0a2,
-    #51a497,
-    #479185,
-    #3e7d74,
-    #356b63,
-    #2c5952
-  ); */
-
-  /* background-image: linear-gradient(
-    to bottom,
-    #1d3b36,
-    #314f4a,
-    #45645e,
-    #5a7a74,
-    #70908a,
-    #70908a,
-    #70908a,
-    #70908a,
-    #5a7a74,
-    #45645e,
-    #314f4a,
-    #1d3b36
-  ); */
 `;
 
 export const ContainerDiv = styled(motion.div)`
@@ -70,7 +38,7 @@ export const TextDiv = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 100%;
+  height: 55%;
   width: 45%;
   padding: 0.2rem;
   margin-left: 5em;

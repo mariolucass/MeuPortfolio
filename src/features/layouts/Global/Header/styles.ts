@@ -12,24 +12,30 @@ export const Nav = styled(motion.nav)`
   display: flex;
   justify-content: space-between;
   height: 100px;
-  padding: 2em;
   background-color: var(--layout-color);
   border-radius: 0em 0em 0.5em 0.5em;
 
-  ul {
+  .listLinks {
+    margin-right: 1em;
+    padding: 1rem;
     display: flex;
-    gap: 1em;
+    align-items: center;
 
-    li {
+    ul {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      gap: 1em;
 
-      div {
-        margin-top: 2px;
-        height: 5px;
-        width: 50%;
-        background-color: var(--primary-color);
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        div {
+          margin-top: 2px;
+          height: 5px;
+          width: 50%;
+          background-color: var(--primary-color);
+        }
       }
     }
   }
@@ -48,7 +54,7 @@ export const Nav = styled(motion.nav)`
 `;
 
 export const LogoDiv = styled(motion.div)`
-  width: 7.5%;
+  width: 10%;
   height: 100%;
 
   img {

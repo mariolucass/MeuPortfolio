@@ -7,6 +7,7 @@ export const PrincipalDiv = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `;
 
 export const DivIcon = styled(motion.div)`

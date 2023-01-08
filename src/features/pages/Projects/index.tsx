@@ -1,15 +1,19 @@
 import * as styled from "./styles";
 import * as layouts from "../../layouts";
-import { useLoadingContext } from "../../../context/LoadingContext/LoadingContext";
 import { useEffect } from "react";
-import { api } from "../../services/api";
+import { apiGitHub } from "../../services/api";
+import * as components from "../../../components";
+import { useProjectContext } from "../../../context/ProjectContext/ProjectsContext";
 
 export const Projects = () => {
+  const { setProjects } = useProjectContext();
+
   useEffect(() => {
     const loadProjects = async () => {
       try {
-        const response = await api.get("/mariolucass/repos");
-        console.log(response.data[0].description);
+        const responseGitHub = await apiGitHub.get("/mariolucass/repos");
+        setProjects(responseGitHub.data);
+        console.log(responseGitHub.data);
       } catch (error) {
         console.log(error);
       }
@@ -20,8 +24,9 @@ export const Projects = () => {
   return (
     <styled.Main>
       <layouts.Header />
+
       <layouts.LoadingsProducer>
-        <div></div>
+        <components.ListProjects />
       </layouts.LoadingsProducer>
     </styled.Main>
   );

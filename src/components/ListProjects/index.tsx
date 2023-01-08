@@ -1,25 +1,70 @@
 import * as styled from "./styles";
 import { motion } from "framer-motion";
-import { IListProject } from "../../features/interfaces/components/ListProjects";
+import { useProjectContext } from "../../context/ProjectContext/ProjectsContext";
 
-export const ListProjects = ({ list }: IListProject) => {
-  const liProjects = list.map((item) => (
-    <motion.li>
-      <motion.div>
-        <motion.img src={item.img} alt={item.title} />
-      </motion.div>
+import profile from "../../assets/images/me/profile.jpeg";
 
-      <motion.div>
-        <motion.span>{item.title}</motion.span>
-        <motion.p>{item.description}</motion.p>
-      </motion.div>
+export const ListProjects = () => {
+  const { projects } = useProjectContext();
 
-      <motion.div>
-        <motion.a href={item.vercel}></motion.a>
-        <motion.a href={item.github}></motion.a>
-      </motion.div>
-    </motion.li>
-  ));
+  const listVercel = [
+    { name: "BurguerKenzie", url: "https://burguerkenzie-xi.vercel.app" },
+    { name: "KenzieHub", url: "https://kenziehub-henna-seven.vercel.app" },
+    { name: "NuKenzie", url: "https://nukenzie-wheat.vercel.app" },
+  ];
+
+  const liProjects = projects.map((item) => {
+    if (!item.has_pages) {
+      const elem = listVercel.find((elem) => elem.name === item.name);
+      console.log(elem);
+
+      if (elem) {
+        item.vercel = elem.url;
+      }
+    }
+
+    console.log(item.date);
+
+    if (item.name !== "mariolucass") {
+      return (
+        <motion.li key={item.id}>
+          <motion.img src={profile} alt={item.name} />
+
+          <motion.div className="divOverlay">
+            <motion.div className="divTitle">
+              <motion.h3>{item.name}</motion.h3>
+            </motion.div>
+
+            <motion.div className="divInfo">
+              <motion.h4> Descrição:</motion.h4>
+              <motion.p>
+                {item.description ? item.description : "Ainda não há descrição"}
+              </motion.p>
+
+              <motion.div className="divButton">
+                {item.has_pages ? (
+                  <motion.a
+                    href={`https://mariolucass.github.io/${item.name}/`}
+                    target="_blank"
+                  >
+                    Página
+                  </motion.a>
+                ) : (
+                  <motion.a href={item.vercel} target="_blank">
+                    Página
+                  </motion.a>
+                )}
+
+                <motion.a href={item.svn_url} target="_blank">
+                  Repositório
+                </motion.a>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </motion.li>
+      );
+    }
+  });
 
   return <styled.ProjectList>{liProjects}</styled.ProjectList>;
 };

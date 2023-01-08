@@ -1,9 +1,14 @@
 export interface IProject {
-  img: string;
-  title: string;
-  description: string;
-  vercel: string;
-  github: string;
+  id?: number;
+  img?: string;
+  name?: string;
+  description?: string;
+  vercel?: string;
+  github?: string;
+  has_pages?: boolean;
+  updatedAt?: string;
+  date?: string;
+  svn_url?: string;
 }
 
 export interface IListProject {

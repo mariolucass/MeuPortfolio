@@ -29,8 +29,8 @@ export const AboutParticulars = () => {
 
   return (
     <>
-      <motion.h2 className="highFont">
-        QUALIDADES
+      <motion.h2>
+        Qualidades
         <motion.div></motion.div>
       </motion.h2>
       <styled.listParticulars>{renderList}</styled.listParticulars>

@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 export const AboutInfo = () => (
   <>
-    <motion.h2 className="highFont">
-      SOBRE MIM
+    <motion.h2>
+      Sobre mim
       <motion.div></motion.div>
     </motion.h2>
 

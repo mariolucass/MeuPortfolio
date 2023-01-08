@@ -3,7 +3,6 @@ import { toast } from "react-toastify";
 
 import { IChildren } from "../../features/interfaces/global/globalInterfaces";
 import { IProjectContext } from "../../features/interfaces/contexts/ProjectContext.interface";
-import { api } from "../../features/services/api";
 import { IProject } from "../../features/interfaces/components/ListProjects";
 
 export const ProjectContext = createContext<IProjectContext>(
@@ -14,18 +13,18 @@ export const ProjectProvider = ({ children }: IChildren) => {
   const [projects, setProjects] = useState<IProject[]>([] as IProject[]);
   const [loaderProjects, setLoaderProjects] = useState(false);
 
-  useEffect(() => {
-    const loadProjects = async () => {
-      try {
-        const response = await api.get("/techs");
-        console.log(response.data);
-        setProjects(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    loadProjects();
-  });
+  // useEffect(() => {
+  //   const loadProjects = async () => {
+  //     try {
+  //       const response = await api.get("/techs");
+  //       console.log(response.data);
+  //       setProjects(response.data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   loadProjects();
+  // });
 
   useEffect(() => {}, [loaderProjects]);
 

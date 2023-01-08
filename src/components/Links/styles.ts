@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const LinkStyled = styled(Link)`
   background-color: var(--button-color);
-  width: 50%;
+  width: 128px;
   height: 64px;
   display: flex;
   justify-content: center;

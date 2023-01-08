@@ -14,19 +14,19 @@ export const styleHidden = {
 };
 
 export const style1Show = {
-  transform: "translateX(200px)",
+  transform: "translateX(400px)",
   opacity: 0,
   transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 };
 
 export const style2Show = {
-  transform: "translateX(-200px)",
+  transform: "translateX(-400px)",
   opacity: 0,
   transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 };
 
 export const style3Show = {
-  transform: "translateY(200px)",
+  transform: "translateY(400px)",
   opacity: 0,
   transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 };

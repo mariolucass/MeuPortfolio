@@ -10,17 +10,17 @@ export const Header = () => (
       </styled.LinkStyled>
     </styled.LogoDiv>
 
-    <motion.div>
+    <motion.div className="listLinks">
       <motion.ul>
         <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <styled.LinkStyled to={"/projects"}>Projetos</styled.LinkStyled>
           <motion.div />
         </motion.li>
 
-        <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+        {/* <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <styled.LinkStyled to={"/techs"}>Habilidades</styled.LinkStyled>
           <motion.div />
-        </motion.li>
+        </motion.li> */}
       </motion.ul>
     </motion.div>
   </styled.Nav>

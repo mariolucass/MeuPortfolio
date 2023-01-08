@@ -4,10 +4,11 @@ import styled from "styled-components";
 import Languages from "../../../assets/images/backgrounds/languages.jpg";
 import Projects from "../../../assets/images/backgrounds/projects.jpg";
 import Contacts from "../../../assets/images/backgrounds/contacts.jpg";
+import { Stars } from "../../../assets/images/backgrounds/stars";
 
 export const Main = styled(motion.main)`
   width: 100%;
-  min-height: 100%;
+
   margin-top: 100px;
 
   display: flex;
@@ -17,7 +18,7 @@ export const Main = styled(motion.main)`
 
   section {
     width: 100%;
-    min-height: 100%;
+    height: 95vh;
     margin: 0 auto;
 
     display: flex;
@@ -34,6 +35,7 @@ export const Main = styled(motion.main)`
       justify-content: center;
       flex-direction: column;
       padding: 1em;
+      gap: 3em;
     }
 
     .message {
@@ -71,42 +73,55 @@ export const Main = styled(motion.main)`
 `;
 
 export const SectionAbout = styled(motion.section)`
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color) */
+  background-image: url(${Stars});
   height: 100%;
   align-items: center;
-  height: 1000px;
 
   div {
     flex-direction: column;
     height: 100%;
   }
 
-  .listMedias {
-    position: sticky;
-    flex-direction: row;
+  .profile {
+    width: 35%;
+    padding: 0;
+    border: 1em solid var(--primary-color);
+    background-color: var(--primary-color);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 100%;
+      border-radius: 1em;
+    }
   }
 
   .biography {
     width: 70%;
     height: 100%;
     padding: 1em;
-
+    /* border-radius: 1em; */
     padding-top: 3em;
     gap: 3.5rem;
 
-    background-color: var(--grey-color);
-
     align-items: left;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
     text-align: left;
 
     border-left: 0.5em solid var(--secondary-color);
     /* border-bottom: 0.5em solid var(--secondary-color); */
 
+    .listMedias {
+      position: sticky;
+      flex-direction: row;
+    }
     .textArea {
       width: 40%;
       gap: 1em;
+      /* background-color: var(--white-color); */
 
       h2 {
         padding: 0.4em;
@@ -203,23 +218,9 @@ export const SectionAbout = styled(motion.section)`
       }
     }
   }
-
-  .profile {
-    width: 35%;
-    padding: 0;
-    border-right: 1em solid var(--primary-color);
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      top: 100%;
-    }
-  }
 `;
 
 export const SectionTechs = styled(motion.section)`
-  height: 1000px;
   background: rgb(29, 59, 54);
   background: linear-gradient(
     90deg,
@@ -228,13 +229,16 @@ export const SectionTechs = styled(motion.section)`
   );
 
   .message {
-    background-image: linear-gradient(#2c595290, #2c595290, #2c595290),
-      url(${Languages});
+    border-radius: 0 15em 15em 0;
+    width: 75%;
+    /* background-image: linear-gradient(#2c595290, #2c595290, #2c595290),
+      url("https://cdn.discordapp.com/attachments/844198019104243743/1061353468977217626/jackson-sophat-wUbNvDTsOIc-unsplash_copiar.png"); */
+
+    background-color: var(--tertiary-color);
   }
 `;
 
 export const SectionProjects = styled(motion.section)`
-  height: 1000px;
   background: rgb(14, 15, 14);
   background: linear-gradient(
     90deg,
@@ -243,18 +247,23 @@ export const SectionProjects = styled(motion.section)`
   );
 
   .message {
-    background-image: linear-gradient(#2c595290, #2c595290, #2c595290),
-      url(${Projects});
+    border-radius: 15em 0 0 15em;
+    width: 75%;
+    /* background-image: linear-gradient(#2c595290, #2c595290, #2c595290),
+      url("https://cdn.discordapp.com/attachments/844198019104243743/1061353469463769108/jackson-sophat-_t-l5FFH8VA-unsplash_copiar.png"); */
+    background-color: var(--tertiary-color);
   }
 `;
 
 export const SectionForm = styled(motion.section)`
-  height: 1000px;
   background-color: var(--primary-color);
   align-items: center;
 
   .message {
-    background-image: linear-gradient(#2c595290, #2c595290, #2c595290),
-      url(${Contacts});
+    border-radius: 0 15em 15em 0;
+    width: 75%;
+    /* background-image: linear-gradient(#2c595290, #2c595290, #2c595290),
+      url("https://cdn.discordapp.com/attachments/844198019104243743/1061353469941911612/jackson-sophat-JTucHiLel5U-unsplash_copiar.png"); */
+    background-color: var(--tertiary-color);
   }
 `;

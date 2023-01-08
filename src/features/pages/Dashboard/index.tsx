@@ -8,12 +8,14 @@ import { motion, useInView } from "framer-motion";
 import Profile from "../../../assets/images/me/profile.jpeg";
 
 export const Dashboard = () => {
+  const ref = useRef(null);
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
 
-  const isInView2 = useInView(ref2);
+  const isInView = useInView(ref);
   const isInView1 = useInView(ref1);
+  const isInView2 = useInView(ref2);
   const isInView3 = useInView(ref3);
 
   const style1 = (isInView: boolean) => {
@@ -33,7 +35,7 @@ export const Dashboard = () => {
 
       <layouts.Welcome />
 
-      <styled.SectionAbout>
+      <styled.SectionAbout ref={ref}>
         <motion.div className="profile">
           <motion.img src={Profile} alt="Profile" />
         </motion.div>
@@ -62,8 +64,8 @@ export const Dashboard = () => {
       </styled.SectionAbout>
 
       <styled.SectionTechs ref={ref1}>
-        <motion.div className="message highFont">
-          <layouts.AnimatedText text="HABILIDADES" inView={isInView1} />
+        <motion.div className="message highFont" style={style2(isInView1)}>
+          {/* <layouts.AnimatedText text="HABILIDADES" inView={isInView1} /> */}
         </motion.div>
 
         <motion.div className="info" style={style1(isInView1)}>
@@ -80,18 +82,19 @@ export const Dashboard = () => {
           <components.Link to={"/projects"}>Projetos</components.Link>
         </motion.div>
 
-        <motion.div className="message highFont">
-          <layouts.AnimatedText text="PROJETOS" inView={isInView2} />
+        <motion.div className="message highFont" style={style1(isInView2)}>
+          {/* <layouts.AnimatedText text="PROJETOS" inView={isInView2} /> */}
         </motion.div>
       </styled.SectionProjects>
 
       <styled.SectionForm ref={ref3}>
-        <motion.div className="message highFont">
-          <layouts.AnimatedText text="CONTATOS" inView={isInView3} />
+        <motion.div className="message highFont" style={style2(isInView3)}>
+          {/* <layouts.AnimatedText text="CONTATOS" inView={isInView3} /> */}
         </motion.div>
 
-        <motion.div className="info" style={style3(isInView3)}>
+        <motion.div className="info" style={style1(isInView3)}>
           <layouts.ImageListMessages />
+          <layouts.FormDashboard />
         </motion.div>
       </styled.SectionForm>
 

@@ -2,7 +2,7 @@ import { ImageList } from "@mui/material";
 import ImageListItem from "@mui/material/ImageListItem";
 
 export const Images = ({ list }: any) => (
-  <ImageList variant="masonry" cols={3} gap={12} classes={"imgList"}>
+  <ImageList variant="masonry" cols={4} gap={8} classes={"imgList"}>
     {list.map((item: any) => (
       <ImageListItem key={item.img} sx={{ width: 166, height: 166 }}>
         <img

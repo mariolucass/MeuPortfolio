@@ -1,16 +1,15 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-
 :root{
     --primary-color:#1d3b36;
     --primary25-color: #1d3b3625; 
 
     --secondary-color: #2C5952;
-    --secondary75-color: #2C595275;
+    --secondary75-color: #2C595275; 
 
-    /* --secondary-color: #97B1AB; */
-    /* --secondary75-color:##97B1AB75; */
+    /* --secondary-color: #97B1AB;  */
+     /* --secondary75-color:##97B1AB75; */
 
     /* --secondary-color: #415F5A;
     --secondary75-color:#415F5A75; */
@@ -52,16 +51,16 @@ export const GlobalStyle = createGlobalStyle`
     --layout-color: #161717;
 
     --text-color: #fefefd;
-    --paragraph-color: #7f7f7f;
+    --paragraph-color: #fefefd;
 
     ///////
     ///////
     ///////
 
-    --button-color:#596579;
-    --buttonHover-color:#2B3648;
-    --buttonActive-color: #637C77;
-
+    --button-color: var(--secondary-color);
+    --buttonHover-color:var(--tertiary-color);
+    --buttonActive-color:var(--quaternary-color);
+ 
     ///////
     ///////
     ///////
@@ -71,6 +70,11 @@ export const GlobalStyle = createGlobalStyle`
     --toastify-spinner-color: var(--primary-color);
 
     --font: 'Inter', sans-serif;
+}
+
+#root{
+    width:100vw;
+    height:100vh;
 }
 
 * {
@@ -92,6 +96,20 @@ body {
 
     font-family: var(--font);
     background-color: var(--black-color);
+
+    ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+    background: transparent; 
+    background-color: var(--secondary-color); 
+    }
+
+    ::-webkit-scrollbar-track {
+    background: transparent;
+    }
 }
 
 a { 
@@ -111,11 +129,6 @@ p {
     color: var(--paragraph-color)
 }
 
-.highFont {
-    font-family: Ade-Display, sans-serif;
-    letter-spacing: .7rem;
-}
-
 button, a{
     font-family: var(--font);
 }
@@ -125,5 +138,4 @@ input{
         font-family: var(--font);
     }
 }
-
 `;
