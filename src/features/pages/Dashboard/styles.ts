@@ -36,6 +36,62 @@ export const Main = styled(motion.main)`
       flex-direction: column;
       padding: 1em;
       gap: 3em;
+
+      @media (max-width: 1419px) {
+        ul {
+          display: flex;
+          width: 100%;
+          flex-direction: row;
+          column-gap: 4px;
+          flex-wrap: wrap;
+          align-content: flex-start;
+          justify-content: space-around;
+          gap: 0.25rem;
+          margin-left: 0px;
+        }
+      }
+
+      @media (max-width: 1354px) {
+        li {
+          max-width: 126px;
+          max-height: 126px;
+        }
+      }
+
+      @media (max-width: 1023px) {
+        li {
+          max-width: 84px;
+          max-height: 84px;
+        }
+      }
+
+      @media (max-width: 759px) {
+        ul {
+          width: 80%;
+        }
+
+        li {
+          max-width: 105px;
+          max-height: 105px;
+        }
+      }
+
+      @media (max-width: 587px) {
+        li {
+          max-width: 84px;
+          max-height: 84px;
+        }
+      }
+
+      @media (max-width: 366px) {
+        ul {
+          width: 100%;
+        }
+        li {
+          max-width: 63px;
+          max-height: 63px;
+        }
+      }
     }
 
     .message {
@@ -67,6 +123,24 @@ export const Main = styled(motion.main)`
         background-color: var(--secondary-color);
 
         border-radius: 0.7em 0.7em 0em 0em;
+      }
+    }
+
+    @media (max-width: 767px) {
+      div {
+        display: flex;
+        min-height: 25vh;
+      }
+
+      .message {
+        width: 100%;
+        height: 50vh;
+        border-radius: 0px;
+      }
+
+      .info {
+        width: 100%;
+        height: 50vh;
       }
     }
   }
@@ -236,6 +310,10 @@ export const SectionTechs = styled(motion.section)`
 
     background-color: var(--tertiary-color);
   }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 
 export const SectionProjects = styled(motion.section)`
@@ -253,6 +331,10 @@ export const SectionProjects = styled(motion.section)`
       url("https://cdn.discordapp.com/attachments/844198019104243743/1061353469463769108/jackson-sophat-_t-l5FFH8VA-unsplash_copiar.png"); */
     background-color: var(--tertiary-color);
   }
+
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const SectionForm = styled(motion.section)`
@@ -265,5 +347,8 @@ export const SectionForm = styled(motion.section)`
     /* background-image: linear-gradient(#2c595290, #2c595290, #2c595290),
       url("https://cdn.discordapp.com/attachments/844198019104243743/1061353469941911612/jackson-sophat-JTucHiLel5U-unsplash_copiar.png"); */
     background-color: var(--tertiary-color);
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
   }
 `;

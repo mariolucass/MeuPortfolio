@@ -70,8 +70,6 @@ export const Dashboard = () => {
 
         <motion.div className="info" style={style1(isInView1)}>
           <layouts.Images list={databases.Techs} />
-
-          <components.Link to={"/techs"}>Habilidades</components.Link>
         </motion.div>
       </styled.SectionTechs>
 

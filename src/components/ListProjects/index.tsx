@@ -2,8 +2,6 @@ import * as styled from "./styles";
 import { motion } from "framer-motion";
 import { useProjectContext } from "../../context/ProjectContext/ProjectsContext";
 
-import profile from "../../assets/images/me/profile.jpeg";
-
 export const ListProjects = () => {
   const { projects } = useProjectContext();
 
@@ -13,54 +11,89 @@ export const ListProjects = () => {
     { name: "NuKenzie", url: "https://nukenzie-wheat.vercel.app" },
   ];
 
+  const listImg = [
+    {
+      name: "BurguerKenzie",
+      url: "https://live.staticflickr.com/65535/52616062139_698c62722e_b.jpg",
+    },
+    {
+      name: "KenzieHub",
+      url: "https://live.staticflickr.com/65535/52615799046_2ac69fbcf7_b.jpg",
+    },
+    {
+      name: "NuKenzie",
+      url: "https://live.staticflickr.com/65535/52616233340_fdc18e7790_b.jpg",
+    },
+    {
+      name: "ProjetoEmpresas",
+      url: "https://live.staticflickr.com/65535/52615290012_82b6c17341_b.jpg",
+    },
+    {
+      name: "ProjetoEcommerce01",
+      url: "https://live.staticflickr.com/65535/52616233415_a0dc097363_b.jpg",
+    },
+    {
+      name: "ProjetoTreeter",
+      url: "https://live.staticflickr.com/65535/52615798971_537a143b84_b.jpg",
+    },
+  ];
+
   const liProjects = projects.map((item) => {
+    const elem = listImg.find((elem) => elem.name === item.name);
+
+    if (elem) {
+      item.img = elem.url;
+    }
+
     if (!item.has_pages) {
       const elem = listVercel.find((elem) => elem.name === item.name);
-      console.log(elem);
 
       if (elem) {
         item.vercel = elem.url;
       }
     }
 
-    console.log(item.date);
-
     if (item.name !== "mariolucass") {
       return (
         <motion.li key={item.id}>
-          <motion.img src={profile} alt={item.name} />
+          <motion.img src={item.img} alt={item.name} className="card__image" />
 
-          <motion.div className="divOverlay">
-            <motion.div className="divTitle">
+          <styled.HoverDiv className="hover_div">
+            <styled.HeaderDiv className="header_div">
+              <motion.svg xmlns="http://www.w3.org/2000/svg">
+                <motion.path d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" />
+              </motion.svg>
+
               <motion.h3>{item.name}</motion.h3>
-            </motion.div>
+            </styled.HeaderDiv>
 
-            <motion.div className="divInfo">
-              <motion.h4> Descrição:</motion.h4>
+            <styled.DescriptionDiv>
               <motion.p>
-                {item.description ? item.description : "Ainda não há descrição"}
+                {item.description
+                  ? item.description
+                  : "Esse item ainda não tem descricão."}
               </motion.p>
 
-              <motion.div className="divButton">
+              <styled.LinksDiv>
                 {item.has_pages ? (
-                  <motion.a
+                  <styled.LinkStyled1
                     href={`https://mariolucass.github.io/${item.name}/`}
-                    target="_blank"
+                    target={"_blank"}
                   >
                     Página
-                  </motion.a>
+                  </styled.LinkStyled1>
                 ) : (
-                  <motion.a href={item.vercel} target="_blank">
+                  <styled.LinkStyled1 href={item.vercel} target={"_blank"}>
                     Página
-                  </motion.a>
+                  </styled.LinkStyled1>
                 )}
 
-                <motion.a href={item.svn_url} target="_blank">
+                <styled.LinkStyled1 href={item.svn_url} target={"_blank"}>
                   Repositório
-                </motion.a>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+                </styled.LinkStyled1>
+              </styled.LinksDiv>
+            </styled.DescriptionDiv>
+          </styled.HoverDiv>
         </motion.li>
       );
     }

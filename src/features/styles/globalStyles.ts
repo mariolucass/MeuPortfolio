@@ -70,6 +70,10 @@ export const GlobalStyle = createGlobalStyle`
     --toastify-spinner-color: var(--primary-color);
 
     --font: 'Inter', sans-serif;
+
+    --surface-color: #fff;
+    --curve: 40px;
+
 }
 
 #root{

@@ -7,7 +7,7 @@ export const MediaUl = styled(motion.ul)`
   min-width: 32%;
 
   li {
-    .social {
+    div {
       color: var(--primary-color);
       width: 100px;
       display: flex;

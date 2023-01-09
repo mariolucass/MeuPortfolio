@@ -37,8 +37,9 @@ export const TextDiv = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  height: 55%;
+  height: 75%;
   width: 45%;
   padding: 0.2rem;
   margin-left: 5em;
@@ -67,21 +68,28 @@ export const TextDiv = styled(motion.div)`
     background-color: var(--grey-color);
     border-radius: 0 0 1.5em 1.5em;
 
-    h2 {
+    h2,
+    p {
       margin-top: 0.4em;
     }
 
     p {
-      margin-top: 0.4em;
       color: var(--paragraph-color);
       font-size: 1rem;
-    }
-
-    span {
     }
   }
 
   @media (max-width: 1200px) {
     width: 100%;
+    margin-top: 0px;
+  }
+
+  @media (max-width: 1023px) {
+    .paragraph {
+      width: 75%;
+    }
+    .principalName {
+      width: 75%;
+    }
   }
 `;
