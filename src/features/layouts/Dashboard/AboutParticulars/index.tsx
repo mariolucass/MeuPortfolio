@@ -1,6 +1,6 @@
 import * as styled from "./styles";
+
 import { motion } from "framer-motion";
-import { VscActivateBreakpoints } from "react-icons/vsc";
 
 export const AboutParticulars = () => {
   const list = [
@@ -14,7 +14,6 @@ export const AboutParticulars = () => {
 
   const renderList = list.map((elem) => (
     <motion.li key={elem}>
-      {/* <VscActivateBreakpoints /> */}
       <styled.LeftDiv />
 
       <styled.LeftDiv2 />

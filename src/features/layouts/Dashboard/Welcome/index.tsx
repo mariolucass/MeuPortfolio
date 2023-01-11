@@ -2,7 +2,9 @@ import * as styled from "./styles";
 import * as layouts from "../..";
 import * as transitions from "../../../libs/FramerMotion/transitions";
 import * as animations from "../../../libs/FramerMotion/animations";
+
 import { motion } from "framer-motion";
+
 import { TypeAnimation } from "react-type-animation";
 
 export const Welcome = () => {

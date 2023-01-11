@@ -2,56 +2,62 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const listParticulars = styled(motion.ul)`
-  display: flex;
   width: 100%;
-  /* flex-direction: column; */
-  /* gap: 0.1em; */
   height: 50%;
+
+  display: flex;
   align-items: flex-start;
   align-content: flex-start;
   justify-content: center;
   overflow-y: auto;
   flex-wrap: wrap;
+
+  gap: 0.1em;
   row-gap: 1.2em;
 
   li {
-    display: flex;
     width: 31%;
     height: 20%;
+
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* gap: 1em; */
-    border-radius: 1.4em;
+
+    padding: 0px;
 
     background-color: var(--primary-color);
     color: var(--white-color);
-    /* padding: 0.3em; */
-    padding: 0px;
-    transition: 0.4s ease-out;
-    /* box-shadow: -1rem 0 5rem #000; */
+
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
       rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
       rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
     border: 2px solid var(--tertiary-color);
+    border-radius: 1.4em;
     border-left: 0px;
     border-right: 0px;
 
+    transition: 0.4s ease-out;
+
     svg {
       width: 25%;
+      height: 100%;
       max-width: 32px;
       max-height: 32px;
-      height: 100%;
+
       object-fit: contain;
     }
 
     span {
-      display: flex;
-      font-size: 1em;
+      width: 80%;
       height: 40%;
-      width: 200px;
+
+      display: flex;
       align-items: center;
       justify-content: center;
+
+      font-size: 1em;
     }
 
     :hover {
@@ -60,16 +66,30 @@ export const listParticulars = styled(motion.ul)`
       transition: 0.4s ease-out;
     }
   }
+  @media (max-width: 1441px) {
+    li {
+      width: 45%;
+    }
+  }
+
+  @media (max-width: 1025px) {
+    li {
+      width: 55%;
+    }
+  }
 `;
 
 export const LeftDiv = styled(motion.div)`
-  max-width: 16px;
-  border-radius: 1em 0 0 1em;
+  max-width: 10%;
+
   background-color: var(--secondary-color);
+
+  border-radius: 1em 0 0 1em;
 `;
 
 export const LeftDiv2 = styled(motion.div)`
-  max-width: 4px;
+  max-width: 5%;
+
   background-color: var(--quaternary-color);
 `;
 

@@ -3,15 +3,19 @@ import styled from "styled-components";
 
 export const WelcomeDiv = styled(motion.div)`
   width: 100%;
-  position: relative;
-  right: 0%;
+  height: 95vh;
+
   display: flex;
   align-items: left;
   flex-direction: column;
   justify-content: center;
+
+  position: relative;
+  right: 0%;
+
   margin: 0 auto;
   border-radius: 0.5em;
-  height: 95vh;
+
   background-image: linear-gradient(
     to left bottom,
     #70e6d2,
@@ -24,6 +28,7 @@ export const WelcomeDiv = styled(motion.div)`
 
 export const ContainerDiv = styled(motion.div)`
   width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -34,22 +39,27 @@ export const ContainerDiv = styled(motion.div)`
 `;
 
 export const TextDiv = styled(motion.div)`
+  width: 45%;
+  height: 75%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 75%;
-  width: 45%;
+
   padding: 0.2rem;
   margin-left: 5em;
   margin: 6.5% 0;
 
   .principalName {
-    padding: 0.7em;
     width: 35%;
-    border-radius: 1.5em 1.5em 0 0;
+
+    padding: 0.7em;
+
     background-color: var(--primary-color);
+
+    border-radius: 1.5em 1.5em 0 0;
 
     span {
       color: var(--tertiary-color);
@@ -57,15 +67,18 @@ export const TextDiv = styled(motion.div)`
   }
 
   .paragraph {
+    width: 35%;
+    min-height: 50%;
+
     display: flex;
     flex-direction: column;
     align-items: left;
     text-align: center;
+
     padding: 0.7em;
-    width: 35%;
-    min-height: 50%;
-    border-radius: 0.7em;
+
     background-color: var(--grey-color);
+
     border-radius: 0 0 1.5em 1.5em;
 
     h2,
@@ -74,8 +87,9 @@ export const TextDiv = styled(motion.div)`
     }
 
     p {
-      color: var(--paragraph-color);
       font-size: 1rem;
+
+      color: var(--paragraph-color);
     }
   }
 

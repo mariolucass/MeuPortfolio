@@ -1,4 +1,5 @@
 import * as styled from "./styles";
+
 import { IButton } from "../../features/interfaces/components/Button";
 
 export const Button = ({ type, variation, children, onClick }: IButton) => {

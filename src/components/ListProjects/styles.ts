@@ -2,35 +2,33 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ProjectList = styled(motion.ul)`
-  display: flex;
   width: 75%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-start;
+  flex-wrap: wrap;
+
   gap: 2rem;
   margin: 4rem 5vw;
   padding: 0;
-  list-style-type: none;
+
   color: var(--black-color);
-  height: 100%;
-  flex-wrap: wrap;
-  justify-content: space-around;
 
   li {
-    width: 35%;
+    width: 30%;
+    height: 40%;
+
     position: relative;
     display: block;
-    height: 400px;
+
     border-radius: 8px 8px var(--curve) var(--curve);
     overflow: hidden;
-    text-decoration: none;
 
     img {
       width: 100%;
       object-fit: contain;
-    }
-
-    h3 {
-      font-size: 1em;
-      margin: 0 0 0.3em;
-      color: #6a515e;
     }
 
     :hover .hover_div {
@@ -41,17 +39,65 @@ export const ProjectList = styled(motion.ul)`
       transform: translateY(0);
     }
   }
+
+  @media (max-width: 1891px) {
+    li {
+      height: 35%;
+    }
+  }
+
+  @media (max-width: 1573px) {
+    li {
+      height: 32.5%;
+    }
+  }
+
+  @media (max-width: 1411px) {
+    li {
+      height: 30%;
+    }
+  }
+
+  @media (max-width: 1253px) {
+    li {
+      height: 27.5%;
+    }
+  }
+
+  @media (max-width: 1089px) {
+    li {
+      width: 40%;
+      height: 25%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    li {
+      width: 75%;
+      min-height: 40%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    li {
+      height: 31.5%;
+    }
+  }
 `;
 
 export const LinkStyled1 = styled(motion.a)`
-  background-color: var(--button-color);
   width: 128px;
   height: 64px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   border: 2px solid transparent;
   border-radius: 0.3em;
+
+  background-color: var(--button-color);
+
   font-weight: bold;
   cursor: pointer;
 
@@ -66,30 +112,46 @@ export const LinkStyled1 = styled(motion.a)`
 
 export const HoverDiv = styled(motion.div)`
   height: 80%;
+
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 1;
+
   border-radius: calc(var(--curve) * 1px);
   background-color: var(--tertiary-color);
+
   transform: translateY(100%);
   transition: 0.2s ease-in-out;
 `;
 
 export const HeaderDiv = styled(motion.div)`
   position: relative;
+
   display: flex;
   align-items: center;
+
   padding: 2em;
-  border-radius: calc(var(--curve) * 1px) 0 0 0;
+
+  border-radius: var(--curve) 0 0 0;
   background-color: var(--tertiary-color);
+
   transform: translateY(-100%);
   transition: 0.2s ease-in-out;
+
+  h3 {
+    margin: 0 0 0.3em;
+
+    font-size: 1em;
+
+    color: var(--white-color);
+  }
 
   svg {
     width: 80px;
     height: 80px;
+
     position: absolute;
     bottom: 100%;
     right: 0;
@@ -103,23 +165,34 @@ export const HeaderDiv = styled(motion.div)`
 
 export const LinksDiv = styled(motion.div)`
   width: 75%;
+
   display: flex;
   justify-content: flex-end;
+
   gap: 1em;
 `;
 
 export const DescriptionDiv = styled(motion.div)`
-  height: 50%;
-  margin: 0;
-  color: #d7bdca;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
+  height: 80%;
+
   display: flex;
   justify-content: space-around;
-  align-items: flex-end;
+  /* align-items: flex-end; */
+  flex-direction: column;
+
+  margin: 0;
   padding: 2em;
+  padding-top: 1em;
   gap: 1em;
+
+  overflow: hidden;
+
+  border-radius: 0px 0px var(--curve) var(--curve);
+  background-color: var(--primary-color);
+
+  p {
+    text-align: start;
+    text-overflow: ellipsis;
+    width: 75%;
+  }
 `;

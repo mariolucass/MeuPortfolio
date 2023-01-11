@@ -6,12 +6,14 @@ export const InputStyled = styled(motion.input)`
   max-width: 350px;
   height: 48px;
 
-  border-radius: 5px;
-  background-color: var(--white-color);
   padding-left: 10px;
-  border: none;
 
   color: var(--gray-0);
+
+  background-color: var(--white-color);
+
+  border-radius: 5px;
+  border: none;
 
   ::placeholder {
     color: var(--grey-color);
@@ -19,12 +21,16 @@ export const InputStyled = styled(motion.input)`
 `;
 
 export const LabelStyled = styled(motion.label)`
-  color: var(--paragraph-color);
-  display: flex;
-  flex-direction: column;
-  font-weight: 400;
-  gap: 0.3rem;
   width: 100%;
   max-width: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.3rem;
+
+  font-weight: 400;
   font-size: 20px;
+
+  color: var(--paragraph-color);
 `;

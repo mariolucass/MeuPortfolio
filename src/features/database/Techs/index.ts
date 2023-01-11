@@ -19,10 +19,6 @@ export const Techs = [
     name: "JavaScript",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
   },
-  // {
-  //   name: "Python",
-  //   img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-  // },
   {
     name: "Node.js",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg",
@@ -36,6 +32,8 @@ export const Techs = [
     name: "Vue.js",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
   },
-
-  ,
+  // {
+  //   name: "Python",
+  //   img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  // },
 ];

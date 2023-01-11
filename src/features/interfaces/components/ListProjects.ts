@@ -1,7 +1,7 @@
 export interface IProject {
   id?: number;
   img?: string;
-  name?: string;
+  name: string;
   description?: string;
   vercel?: string;
   github?: string;

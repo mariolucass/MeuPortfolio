@@ -1,4 +1,5 @@
 import * as styled from "./styles";
+
 import { motion } from "framer-motion";
 
 export const AboutInfo = () => (
@@ -22,12 +23,5 @@ export const AboutInfo = () => (
         <motion.span> 25/07/2002</motion.span>
       </motion.li>
     </styled.listInfo>
-
-    <motion.p>
-      Desenvolvedor Front-End em busca de uma vaga no mercado, tenho 6 meses de
-      experiência com a criação de diversos projetos usuais e efetivos visando o
-      atual Mercado de trabalho, com experiências em HTML5, CSS3, JavaScript,
-      React, TypeScript, além de experiências comunicativas e de Code Reviews.
-    </motion.p>
   </>
 );

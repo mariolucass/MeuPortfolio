@@ -6,6 +6,7 @@ import ReverseWave from "../../../../assets/images/backgrounds/waveReverse.svg";
 export const Div = styled(motion.div)`
   width: 100vw;
   height: 30vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,6 +15,7 @@ export const Div = styled(motion.div)`
   background-repeat: repeat-x;
   background-size: contain;
   background-position: center;
+
   animation: animatedBackground 10s linear infinite alternate;
 
   @keyframes animatedBackground {

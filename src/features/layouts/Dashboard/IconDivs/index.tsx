@@ -2,7 +2,9 @@ import * as styled from "./styles";
 import * as transitions from "../../../libs/FramerMotion/transitions";
 import * as animations from "../../../libs/FramerMotion/animations";
 import * as variants from "../../../libs/FramerMotion/variants";
+
 import { Avatar } from "@mui/material";
+
 import Icon from "../../../../assets/images/me/myIcon.jpeg";
 
 export const IconDivs = () => (

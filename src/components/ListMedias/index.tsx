@@ -1,5 +1,7 @@
 import * as styled from "./styles";
+
 import { motion } from "framer-motion";
+
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { IListMedias } from "../../features/interfaces/components/ListMedias";
 

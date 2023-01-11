@@ -1,5 +1,7 @@
 import * as styled from "./styles";
+
 import { motion } from "framer-motion";
+
 import Logo from "../../../../assets/images/me/logo.png";
 
 export const Header = () => (

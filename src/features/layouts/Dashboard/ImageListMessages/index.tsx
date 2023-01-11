@@ -1,5 +1,7 @@
 import * as styled from "./styles";
+
 import { motion } from "framer-motion";
+
 import Letter from "../../../../assets/images/icons/letter.png";
 import Message from "../../../../assets/images/icons/message.png";
 import Contacts from "../../../../assets/images/icons/profiles.png";

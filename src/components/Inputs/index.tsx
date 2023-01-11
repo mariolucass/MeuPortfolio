@@ -1,4 +1,5 @@
 import * as styled from "./styles";
+
 import { IInputProps } from "../../features/interfaces/components/Input";
 
 export const Input = ({

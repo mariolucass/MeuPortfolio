@@ -1,8 +1,11 @@
 import * as styled from "./styles";
+
 import { motion } from "framer-motion";
-import { PropagateLoader } from "react-spinners";
-import { LoadingContext } from "../../../../context/LoadingContext/LoadingContext";
+
 import { useContext } from "react";
+import { PropagateLoader } from "react-spinners";
+
+import { LoadingContext } from "../../../../context/LoadingContext/LoadingContext";
 import { IChildren } from "../../../interfaces/global/globalInterfaces";
 
 import Icon from "../../../../assets/images/me/myIcon.jpeg";

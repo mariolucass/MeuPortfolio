@@ -6,6 +6,7 @@ export const listInfo = styled(motion.ul)`
   align-items: left;
   flex-direction: column;
   text-align: left;
+
   gap: 1em;
 
   li {

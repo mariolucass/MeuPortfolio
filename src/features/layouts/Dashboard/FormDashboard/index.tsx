@@ -1,9 +1,12 @@
 import * as styled from "./styles";
 import * as components from "../../../../components";
 import * as validations from "../../../validations";
+
 import { motion } from "framer-motion";
+
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+
 import { RiSendPlaneFill, RiFeedbackLine } from "react-icons/ri";
 
 export const FormDashboard = () => {
@@ -27,27 +30,31 @@ export const FormDashboard = () => {
 
       <components.Input
         type="text"
-        id="email"
-        placeholder="Coloque se e-mail aqui."
+        id="name"
+        placeholder="Coloque seu nome aqui."
         register={register}
       >
-        E-mail
+        Nome
       </components.Input>
       {errors.email && <motion.span></motion.span>}
 
       <components.Input
         type="text"
-        id="name"
-        placeholder="Coloque sua mensagem aqui."
+        id="email"
+        placeholder="Coloque seu e-mail aqui."
         register={register}
       >
-        Mensagem
+        E-mail
       </components.Input>
       {errors.name && <motion.span></motion.span>}
 
-      <components.Button type="submit">
-        <RiSendPlaneFill />
-      </components.Button>
+      <motion.textarea name="" id="" cols={30} rows={10}></motion.textarea>
+
+      <motion.div>
+        <components.Button type="submit">
+          <RiSendPlaneFill />
+        </components.Button>
+      </motion.div>
     </styled.Form>
   );
 };

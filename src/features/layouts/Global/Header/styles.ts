@@ -4,25 +4,33 @@ import styled from "styled-components";
 
 export const Nav = styled(motion.nav)`
   width: 100%;
+  height: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
+
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  height: 100px;
+
   background-color: var(--layout-color);
+
   border-radius: 0em 0em 0.5em 0.5em;
 
   .listLinks {
-    margin-right: 1em;
-    padding: 1rem;
     display: flex;
     align-items: center;
 
+    margin-right: 1em;
+    padding: 1rem;
+
     ul {
       display: flex;
+
       gap: 1em;
 
       li {
@@ -31,9 +39,11 @@ export const Nav = styled(motion.nav)`
         align-items: flex-end;
 
         div {
-          margin-top: 2px;
-          height: 5px;
           width: 50%;
+          height: 5px;
+
+          margin-top: 2px;
+
           background-color: var(--primary-color);
         }
       }
@@ -54,17 +64,18 @@ export const Nav = styled(motion.nav)`
 `;
 
 export const LogoDiv = styled(motion.div)`
-  width: 10%;
-  height: 100%;
+  width: 8%;
+  height: 60px;
 
   img {
     width: 100%;
     height: 100%;
+
     object-fit: contain;
   }
 `;
 
 export const LinkStyled = styled(Link)`
-  color: var(--tertiary-color);
   font-weight: 600;
+  color: var(--tertiary-color);
 `;

@@ -1,7 +1,8 @@
 import * as styled from "./styles";
 import * as variant from "../../../libs/FramerMotion/variants";
-import { useAnimation } from "framer-motion";
+
 import { useEffect } from "react";
+import { useAnimation } from "framer-motion";
 
 interface IAnimatedProps {
   text: string;

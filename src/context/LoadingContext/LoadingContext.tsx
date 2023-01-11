@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { toast } from "react-toastify";
 
+import { toast } from "react-toastify";
 import { IChildren } from "../../features/interfaces/global/globalInterfaces";
 import { ILoadingContext } from "../../features/interfaces/contexts/LoadingContext";
 

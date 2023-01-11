@@ -3,8 +3,13 @@ import * as layouts from "../../layouts";
 import * as components from "../../../components";
 import * as databases from "../../database";
 import * as framerStyles from "../../libs/FramerMotion/styles";
+import * as transitions from "../../libs/FramerMotion/transitions";
+import * as animations from "../../libs/FramerMotion/animations";
+
 import { useRef } from "react";
+
 import { motion, useInView } from "framer-motion";
+
 import Profile from "../../../assets/images/me/profile.jpeg";
 
 export const Dashboard = () => {
@@ -49,7 +54,7 @@ export const Dashboard = () => {
 
               <motion.a
                 className="link"
-                href="https://drive.google.com/file/d/1CspiN7QQnC4GrAbhSd_PqVoP6h2jiyT0/view?usp=sharing"
+                href="https://docs.google.com/document/d/1PfogwIgaR-4HQfpZl77-W7P5n87yITY_/edit?usp=sharing&ouid=117325846807422783815&rtpof=true&sd=true"
                 target={"_blank"}
               >
                 Currículo
@@ -64,8 +69,8 @@ export const Dashboard = () => {
       </styled.SectionAbout>
 
       <styled.SectionTechs ref={ref1}>
-        <motion.div className="message highFont" style={style2(isInView1)}>
-          {/* <layouts.AnimatedText text="HABILIDADES" inView={isInView1} /> */}
+        <motion.div className="message" style={style2(isInView1)}>
+          <motion.div></motion.div>
         </motion.div>
 
         <motion.div className="info" style={style1(isInView1)}>
@@ -74,29 +79,27 @@ export const Dashboard = () => {
       </styled.SectionTechs>
 
       <styled.SectionProjects ref={ref2}>
-        <motion.div className="info" style={style2(isInView2)}>
-          {/* <layouts.Images list={databases.Projects} /> */}
+        <motion.div
+          className="mainDiv"
+          transition={transitions.transitionSpring}
+        >
+          <layouts.ProjectsImageList />
 
-          <components.Link to={"/projects"}>Projetos</components.Link>
-        </motion.div>
-
-        <motion.div className="message highFont" style={style1(isInView2)}>
-          {/* <layouts.AnimatedText text="PROJETOS" inView={isInView2} /> */}
+          <motion.div className="linkProjects">
+            <components.Link to="/projects"> Projetos </components.Link>
+          </motion.div>
         </motion.div>
       </styled.SectionProjects>
 
       <styled.SectionForm ref={ref3}>
-        <motion.div className="message highFont" style={style2(isInView3)}>
-          {/* <layouts.AnimatedText text="CONTATOS" inView={isInView3} /> */}
+        <motion.div className="info" style={style2(isInView3)}>
+          <layouts.Images list={databases.Contacts} />
         </motion.div>
 
-        <motion.div className="info" style={style1(isInView3)}>
-          <layouts.ImageListMessages />
+        <motion.div className="message" style={style1(isInView3)}>
           <layouts.FormDashboard />
         </motion.div>
       </styled.SectionForm>
-
-      {/* <layouts.Footer /> */}
     </styled.Main>
   );
 };
