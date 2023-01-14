@@ -1,10 +1,8 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-import { toast } from "react-toastify";
-
 import { IChildren } from "../../features/interfaces/global/globalInterfaces";
 import { IProjectContext } from "../../features/interfaces/contexts/ProjectContext.interface";
-import { IProject } from "../../features/interfaces/components/ListProjects";
+import { IProject } from "../../features/interfaces/database/ListProjects";
 
 import { apiGitHub } from "../../features/services/api";
 
@@ -26,6 +24,7 @@ export const ProjectProvider = ({ children }: IChildren) => {
             return elem.name !== "mariolucass";
           })
         );
+        console.log(responseGitHub.data);
       } catch (error) {
         console.log(error);
       }

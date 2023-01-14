@@ -18,11 +18,6 @@ export const Header = () => (
           <styled.LinkStyled to={"/projects"}>Projetos</styled.LinkStyled>
           <motion.div />
         </motion.li>
-
-        {/* <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <styled.LinkStyled to={"/techs"}>Habilidades</styled.LinkStyled>
-          <motion.div />
-        </motion.li> */}
       </motion.ul>
     </motion.div>
   </styled.Nav>

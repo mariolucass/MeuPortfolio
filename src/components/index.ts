@@ -6,4 +6,4 @@ export { Link } from "./Links";
 
 export { ListMedias } from "./ListMedias";
 
-export { ListProjects } from "./ListProjects";
+export { TextArea } from "./TextArea";

@@ -12,4 +12,6 @@ export { Welcome } from "./Dashboard/Welcome";
 export { AboutParticulars } from "./Dashboard/AboutParticulars";
 export { AboutInfo } from "./Dashboard/AboutInfo";
 export { ImageListMessages } from "./Dashboard/ImageListMessages";
-export { ProjectsImageList } from "./Dashboard/ProjectImageList/index";
+export { ProjectsImageList } from "./Dashboard/ProjectImageList";
+
+export { ListProjects } from "./Projects/ListProjects/";

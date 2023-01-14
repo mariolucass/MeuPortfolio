@@ -48,7 +48,8 @@ export const ProjectList = styled(motion.ul)`
 
   @media (max-width: 1573px) {
     li {
-      height: 32.5%;
+      height: 37.5%;
+      width: 45%;
     }
   }
 
@@ -66,8 +67,12 @@ export const ProjectList = styled(motion.ul)`
 
   @media (max-width: 1089px) {
     li {
-      width: 40%;
-      height: 25%;
+      width: 75%;
+      min-height: 35%;
+    }
+
+    p {
+      display: block;
     }
   }
 
@@ -111,7 +116,7 @@ export const LinkStyled1 = styled(motion.a)`
 `;
 
 export const HoverDiv = styled(motion.div)`
-  height: 80%;
+  height: 90%;
 
   position: absolute;
   bottom: 0;
@@ -124,6 +129,17 @@ export const HoverDiv = styled(motion.div)`
 
   transform: translateY(100%);
   transition: 0.2s ease-in-out;
+
+  @media (max-width: 1441px) {
+    padding: 0px;
+
+    p {
+      display: none;
+    }
+
+    div {
+    }
+  }
 `;
 
 export const HeaderDiv = styled(motion.div)`
@@ -131,6 +147,7 @@ export const HeaderDiv = styled(motion.div)`
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   padding: 2em;
 
@@ -161,13 +178,25 @@ export const HeaderDiv = styled(motion.div)`
   svg path {
     fill: var(--tertiary-color);
   }
+
+  .header_image {
+    width: 24px;
+    height: 24px;
+    display: flex;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 `;
 
 export const LinksDiv = styled(motion.div)`
-  width: 75%;
+  width: 100%;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
 
   gap: 1em;
 `;

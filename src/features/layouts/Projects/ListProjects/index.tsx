@@ -1,11 +1,11 @@
 import * as styled from "./styles";
-import * as animations from "../../features/libs/FramerMotion/animations";
-import * as transitions from "../../features/libs/FramerMotion/transitions";
-import * as database from "../../features/database";
+import * as animations from "../../../libs/FramerMotion/animations";
+import * as transitions from "../../../libs/FramerMotion/transitions";
+import * as database from "../../../database";
 
 import { motion } from "framer-motion";
 
-import { useProjectContext } from "../../context/ProjectContext/ProjectsContext";
+import { useProjectContext } from "../../../../context/ProjectContext/ProjectsContext";
 
 export const ListProjects = () => {
   const { projects } = useProjectContext();
@@ -40,6 +40,16 @@ export const ListProjects = () => {
             </motion.svg>
 
             <motion.h3>{item.name}</motion.h3>
+            <motion.div className="header_image">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
+                alt=""
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
+                alt=""
+              />
+            </motion.div>
           </styled.HeaderDiv>
 
           <styled.DescriptionDiv>

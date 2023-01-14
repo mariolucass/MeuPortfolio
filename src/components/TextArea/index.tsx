@@ -1,20 +1,18 @@
 import * as styled from "./styles";
 
-import { IInputProps } from "../../features/interfaces/components/Input";
+import { ITextAreaProps } from "../../features/interfaces/components/TextArea";
 
-export const Input = ({
-  type,
+export const TextArea = ({
   placeholder,
   children,
   id,
   register,
-}: IInputProps) => (
+}: ITextAreaProps) => (
   <styled.LabelStyled htmlFor={id}>
     {children}
 
-    <styled.InputStyled
+    <styled.TextAreaStyled
       placeholder={placeholder}
-      type={type}
       id={id}
       {...register(id)}
     />

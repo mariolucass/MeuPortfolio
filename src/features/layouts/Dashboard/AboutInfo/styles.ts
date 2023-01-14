@@ -19,4 +19,8 @@ export const listInfo = styled(motion.ul)`
       color: var(--paragraph-color);
     }
   }
+
+  @media (max-width: 470px) {
+    display: none;
+  }
 `;

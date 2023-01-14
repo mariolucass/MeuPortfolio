@@ -1,7 +1,13 @@
 import axios from "axios";
 
-const GitHubURL = "https://api.github.com/users";
+const gitHubURL = "https://api.github.com/users";
 export const apiGitHub = axios.create({
-  baseURL: GitHubURL,
+  baseURL: gitHubURL,
+  timeout: 5000,
+});
+
+const mainURL = "  ";
+export const apiMain = axios.create({
+  baseURL: mainURL,
   timeout: 5000,
 });

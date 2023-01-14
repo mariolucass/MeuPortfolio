@@ -40,7 +40,7 @@ export const ContainerDiv = styled(motion.div)`
 
 export const TextDiv = styled(motion.div)`
   width: 45%;
-  height: 75%;
+  height: 65%;
 
   display: flex;
   flex-direction: column;
@@ -98,12 +98,40 @@ export const TextDiv = styled(motion.div)`
     margin-top: 0px;
   }
 
+  @media (max-width: 1440px) {
+    .paragraph {
+      min-height: 80%;
+    }
+  }
+  @media (max-width: 1024px) {
+    .paragraph {
+      width: 75%;
+    }
+
+    .principalName {
+      width: 75%;
+    }
+  }
+
   @media (max-width: 1023px) {
     .paragraph {
       width: 75%;
     }
+
     .principalName {
       width: 75%;
+    }
+  }
+
+  @media (max-width: 471px) {
+    width: 100%;
+    .paragraph {
+      width: 100%;
+      min-height: 40%;
+    }
+
+    .principalName {
+      width: 100%;
     }
   }
 `;

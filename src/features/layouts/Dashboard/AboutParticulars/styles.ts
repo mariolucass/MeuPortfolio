@@ -39,6 +39,7 @@ export const listParticulars = styled(motion.ul)`
     border-right: 0px;
 
     transition: 0.4s ease-out;
+    cursor: pointer;
 
     svg {
       width: 25%;
@@ -66,15 +67,23 @@ export const listParticulars = styled(motion.ul)`
       transition: 0.4s ease-out;
     }
   }
+
   @media (max-width: 1441px) {
     li {
-      width: 45%;
+      width: 75%;
     }
   }
 
-  @media (max-width: 1025px) {
+  @media (max-width: 768px) {
+    flex-direction: row;
+
     li {
-      width: 55%;
+      min-width: 35%;
+      height: 30%;
+
+      div {
+        min-height: 10px;
+      }
     }
   }
 `;

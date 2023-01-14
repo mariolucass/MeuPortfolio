@@ -260,6 +260,7 @@ export const SectionAbout = styled(motion.section)`
         .link {
           width: 32%;
           height: 64px;
+          min-width: 120px;
 
           display: flex;
           justify-content: center;
@@ -296,13 +297,12 @@ export const SectionAbout = styled(motion.section)`
         align-items: center;
         flex-direction: column;
 
-        gap: 1rem;
         padding: 0.4em;
         padding-top: 0.8em;
         padding-bottom: 0;
+        gap: 1rem;
 
         background-color: var(--primary-color);
-
         border-radius: 1em 1em 0 0;
 
         div {
@@ -329,7 +329,7 @@ export const SectionAbout = styled(motion.section)`
 
         h2 {
           min-width: 20%;
-          height: 30%;
+          max-height: 100px;
 
           font-size: 1em;
 
@@ -349,6 +349,116 @@ export const SectionAbout = styled(motion.section)`
       }
     }
   }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 1rem;
+
+    .biography {
+      width: 100%;
+      min-height: 125px;
+
+      gap: 0.5rem;
+
+      border: 0px;
+
+      .textArea {
+        width: 100%;
+      }
+
+      .mediaArea {
+        width: 100%;
+        min-height: 40%;
+
+        ul {
+          height: 200px;
+
+          li {
+            div {
+              min-height: 40%;
+
+              a {
+                height: 60px;
+              }
+            }
+          }
+        }
+      }
+
+      .particularsArea {
+        width: 100%;
+        min-height: 125px;
+        gap: 0.5rem;
+
+        h2 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+
+          gap: 1rem;
+          padding: 0.4em;
+          padding-top: 0.8em;
+          padding-bottom: 0;
+
+          background-color: var(--primary-color);
+
+          border-radius: 1em 1em 0 0;
+
+          div {
+            width: 100%;
+            max-height: 10px;
+
+            padding: 0;
+
+            background-color: var(--secondary-color);
+
+            border-radius: 1em 1em 0 0;
+          }
+        }
+
+        ul {
+          height: 100%;
+          flex-direction: row;
+
+          li {
+            height: 60%;
+            width: 45%;
+            div {
+              min-height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .profile {
+      width: 65%;
+      border: 0px;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .profile {
+      width: 60%;
+      height: 55%;
+
+      border: 0px;
+    }
+
+    .particularsArea {
+      ul {
+        min-width: 75%;
+
+        flex-direction: row;
+
+        li {
+          min-width: 75%;
+          max-height: 35%;
+        }
+      }
+    }
+  }
 `;
 
 export const SectionTechs = styled(motion.section)`
@@ -364,44 +474,103 @@ export const SectionTechs = styled(motion.section)`
     background-color: var(--tertiary-color);
 
     border-radius: 0 15em 15em 0;
+
+    div {
+      width: 75%;
+      height: 65%;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        border-radius: 8em;
+
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      }
+    }
   }
 
   @media (max-width: 767px) {
     flex-direction: column;
+
+    .profile {
+      min-width: 85%;
+      height: 35%;
+
+      padding: 0;
+
+      background-color: var(--primary-color);
+
+      border: 0.2em solid var(--primary-color);
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        top: 100%;
+        object-fit: cover;
+        border-radius: 1em;
+      }
+    }
   }
 `;
 
 export const SectionProjects = styled(motion.section)`
-  background-color: var(--primary-color);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
   height: 100%;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--primary-color);
+
   .mainDiv {
-    width: 100%;
-    padding: 0px;
-    padding-top: 3em;
+    width: 90%;
     height: 100%;
+
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    gap: 1em;
+
+    padding: 0px;
+    padding-top: 1em;
+    gap: 3em;
 
     & div {
-      border-radius: var(--curve);
+      width: 75%;
+      max-width: 975px;
+      border-radius: 1em;
+
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     }
 
     .linkProjects {
       width: 100%;
+      max-width: 100%;
+
       display: flex;
       justify-content: center;
       align-items: center;
+
+      box-shadow: none;
     }
   }
 
-  @media (max-width: 767px) {
-    flex-direction: column-reverse;
+  @media (max-width: 1025px) {
+    padding: 0px;
+    margin: 0px;
+
+    .mainDiv {
+      width: 100%;
+
+      div {
+        width: 85%;
+      }
+    }
   }
 `;
 

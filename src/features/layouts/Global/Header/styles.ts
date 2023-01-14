@@ -7,7 +7,7 @@ export const Nav = styled(motion.nav)`
   height: 100px;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   position: fixed;
@@ -38,6 +38,11 @@ export const Nav = styled(motion.nav)`
         flex-direction: column;
         align-items: flex-end;
 
+        a {
+          font-weight: 600;
+          color: var(--tertiary-color);
+        }
+
         div {
           width: 50%;
           height: 5px;
@@ -64,7 +69,7 @@ export const Nav = styled(motion.nav)`
 `;
 
 export const LogoDiv = styled(motion.div)`
-  width: 8%;
+  width: 180px;
   height: 60px;
 
   img {

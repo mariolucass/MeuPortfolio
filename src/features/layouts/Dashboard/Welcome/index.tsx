@@ -12,7 +12,7 @@ export const Welcome = () => {
     <styled.WelcomeDiv>
       <layouts.ReverseDivAnimated />
 
-      <styled.ContainerDiv>
+      <styled.ContainerDiv id="idInitial">
         <styled.TextDiv
           initial={animations.animateHidden}
           animate={animations.animateShowing}

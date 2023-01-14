@@ -11,6 +11,11 @@ export const IconDivs = () => (
   <styled.PrincipalDiv
     animate={animations.animate360}
     transition={transitions.transitionAccordion}
+    drag
+    dragDirectionLock
+    dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+    dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+    dragElastic={0.5}
   >
     <styled.QuinaryDiv
       whileTap="tap"

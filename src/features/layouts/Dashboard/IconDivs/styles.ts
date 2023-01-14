@@ -11,6 +11,12 @@ export const PrincipalDiv = styled(motion.div)`
   margin: 3.5% 0;
 
   cursor: pointer;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    height: 50%;
+    margin-top: 2em;
+  }
 `;
 
 export const DivIcon = styled(motion.div)`
@@ -28,6 +34,21 @@ export const DivIcon = styled(motion.div)`
     object-fit: contain;
 
     border-radius: 6em;
+
+    cursor: pointer;
+  }
+
+  /* 172.7 */
+  @media (max-width: 1200px) {
+    width: 172.7px;
+    height: 172.7px;
+    margin-top: 0px;
+  }
+
+  @media (max-width: 768px) {
+    width: 129.5px;
+    height: 129.5px;
+    margin-top: 0px;
   }
 `;
 

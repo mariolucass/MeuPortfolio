@@ -1,20 +1,23 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const InputStyled = styled(motion.input)`
+export const TextAreaStyled = styled(motion.textarea)`
   width: 100%;
   max-width: 350px;
-  height: 48px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
 
   padding-left: 10px;
+  padding-top: 10px;
 
   color: var(--gray-0);
 
   background-color: var(--white-color);
-  color: var(--black-color);
 
   border-radius: 5px;
   border: none;
+  color: var(--black-color);
 
   ::placeholder {
     color: var(--grey-color);

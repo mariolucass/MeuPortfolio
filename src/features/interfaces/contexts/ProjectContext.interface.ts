@@ -1,4 +1,4 @@
-import { IProject } from "../components/ListProjects";
+import { IProject } from "../database/ListProjects";
 
 export interface IProjectContext {
   projects: IProject[];

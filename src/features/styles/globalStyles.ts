@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 :root{
@@ -83,8 +83,8 @@ body {
 
     font-family: var(--font);
     
-    background-color: var(--black-color);
-
+    background-color: var(--black-color); 
+} 
     ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -98,7 +98,6 @@ body {
     ::-webkit-scrollbar-track {
     background: transparent;
     }
-}
 
 h1,h2,h3,a {
     color: var(--text-color);
@@ -117,7 +116,9 @@ button, a{
     font-family: var(--font);
 }
 
-input{
+input, textarea{
+    font-family: var(--font);
+    
     ::placeholder{
         font-family: var(--font);
     }

@@ -54,7 +54,7 @@ export const Dashboard = () => {
 
               <motion.a
                 className="link"
-                href="https://docs.google.com/document/d/1PfogwIgaR-4HQfpZl77-W7P5n87yITY_/edit?usp=sharing&ouid=117325846807422783815&rtpof=true&sd=true"
+                href={databases.Users[0].curriculo}
                 target={"_blank"}
               >
                 Currículo
@@ -70,7 +70,12 @@ export const Dashboard = () => {
 
       <styled.SectionTechs ref={ref1}>
         <motion.div className="message" style={style2(isInView1)}>
-          <motion.div></motion.div>
+          <motion.div>
+            <motion.img
+              src="https://cdn.dribbble.com/users/1292677/screenshots/6139167/media/fcf7fd0c619bb87706533079240915f3.gif"
+              alt=""
+            />
+          </motion.div>
         </motion.div>
 
         <motion.div className="info" style={style1(isInView1)}>
@@ -93,7 +98,12 @@ export const Dashboard = () => {
 
       <styled.SectionForm ref={ref3}>
         <motion.div className="info" style={style2(isInView3)}>
-          <layouts.Images list={databases.Contacts} />
+          <layouts.Images
+            list={databases.Contacts}
+            initial={animations.animateHidden}
+            animate={animations.animateShowing}
+            transition={transitions.transitionSpring}
+          />
         </motion.div>
 
         <motion.div className="message" style={style1(isInView3)}>

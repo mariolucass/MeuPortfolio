@@ -8,24 +8,34 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { RiSendPlaneFill, RiFeedbackLine } from "react-icons/ri";
+import { IForm } from "../../../interfaces/global/globalInterfaces";
+import { apiMain } from "../../../services/api";
 
 export const FormDashboard = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({ resolver: yupResolver(validations.FormSchema) });
+  } = useForm<IForm>({ resolver: yupResolver(validations.FormSchema) });
+
+  const postApi = async (data: IForm) => {
+    try {
+      await apiMain.post("/messages", { ...data });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <styled.Form
       onSubmit={() => {
-        handleSubmit;
+        handleSubmit(postApi);
       }}
     >
       <motion.div className="title">
         <RiFeedbackLine size={35} />
 
-        <motion.h2>Feedbacks</motion.h2>
+        <motion.h2>Entre em contato!</motion.h2>
       </motion.div>
 
       <components.Input
@@ -34,7 +44,7 @@ export const FormDashboard = () => {
         placeholder="Coloque seu nome aqui."
         register={register}
       >
-        Nome
+        Nome:
       </components.Input>
       {errors.email && <motion.span></motion.span>}
 
@@ -44,13 +54,20 @@ export const FormDashboard = () => {
         placeholder="Coloque seu e-mail aqui."
         register={register}
       >
-        E-mail
+        E-mail:
       </components.Input>
       {errors.name && <motion.span></motion.span>}
 
-      <motion.textarea name="" id="" cols={30} rows={10}></motion.textarea>
+      <components.TextArea
+        id="message"
+        placeholder="Coloque seu e-mail aqui."
+        register={register}
+      >
+        Mensagem:
+      </components.TextArea>
+      {errors.message && <motion.span></motion.span>}
 
-      <motion.div>
+      <motion.div className="button">
         <components.Button type="submit">
           <RiSendPlaneFill />
         </components.Button>
