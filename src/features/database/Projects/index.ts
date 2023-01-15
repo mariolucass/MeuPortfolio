@@ -21,7 +21,7 @@ export class Projects {
     },
     {
       name: "ProjetoEmpresas",
-      url: "https://live.staticflickr.com/65535/52615290012_82b6c17341_b.jpg",
+      url: "https://live.staticflickr.com/65535/52627678840_2d62edf4ca_k.jpg",
     },
     {
       name: "ProjetoEcommerce01",

@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const TextAreaStyled = styled(motion.textarea)`
   width: 100%;
   max-width: 350px;
-  height: 200px;
+  min-height: 150px;
   display: flex;
   align-content: flex-start;
 

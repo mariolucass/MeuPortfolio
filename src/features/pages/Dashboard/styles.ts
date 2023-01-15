@@ -1,7 +1,6 @@
+import { Stars } from "./../../../assets/images/backgrounds/stars";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-
-import { Stars } from "../../../assets/images/backgrounds/stars";
 
 export const Main = styled(motion.main)`
   width: 100%;
@@ -11,6 +10,8 @@ export const Main = styled(motion.main)`
   overflow-x: hidden;
 
   margin-top: 100px;
+
+  background-image: url(${Stars});
 
   section {
     width: 100%;
@@ -65,7 +66,7 @@ export const Main = styled(motion.main)`
         }
       }
 
-      @media (max-width: 759px) {
+      @media (max-width: 769px) {
         ul {
           width: 80%;
         }
@@ -471,7 +472,14 @@ export const SectionTechs = styled(motion.section)`
   .message {
     width: 75%;
 
-    background-color: var(--tertiary-color);
+    background-image: linear-gradient(
+      to left,
+      #5ebfaf,
+      #4d9c8f,
+      #3c7a70,
+      #2c5952,
+      #1d3b36
+    );
 
     border-radius: 0 15em 15em 0;
 
@@ -485,7 +493,7 @@ export const SectionTechs = styled(motion.section)`
 
         object-fit: cover;
 
-        border-radius: 8em;
+        border-radius: 1em;
 
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
           rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
@@ -526,6 +534,14 @@ export const SectionProjects = styled(motion.section)`
   justify-content: center;
 
   background-color: var(--primary-color);
+  background-image: radial-gradient(
+    circle,
+    #5ebfaf,
+    #4d9c8f,
+    #3c7a70,
+    #2c5952,
+    #1d3b36
+  );
 
   .mainDiv {
     width: 90%;
@@ -586,7 +602,14 @@ export const SectionForm = styled(motion.section)`
   .message {
     width: 75%;
 
-    background-color: var(--tertiary-color);
+    background-image: linear-gradient(
+      to right,
+      #5ebfaf,
+      #4d9c8f,
+      #3c7a70,
+      #2c5952,
+      #1d3b36
+    );
 
     border-radius: 15em 0 0 15em;
   }

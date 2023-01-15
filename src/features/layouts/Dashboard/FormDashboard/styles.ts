@@ -3,7 +3,9 @@ import styled from "styled-components";
 
 export const Form = styled(motion.form)`
   width: 35%;
-  height: 75%;
+  height: 90%;
+  min-width: 400px;
+  max-height: 600px;
 
   display: flex;
   flex-direction: column;
@@ -47,8 +49,30 @@ export const Form = styled(motion.form)`
     }
   }
 
+  .interactions {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1em;
+
+    .inputs {
+      width: 100%;
+      height: 40%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      gap: 0.5em;
+    }
+  }
+
   .button {
-    margin-top: 1.5em;
     width: 100%;
     justify-content: flex-end;
   }
@@ -57,18 +81,39 @@ export const Form = styled(motion.form)`
     position: sticky;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 769px) {
     flex-direction: row;
     width: 95%;
+    gap: 0.6em;
+    align-items: flex-start;
+    padding: 0.5em;
+    height: 90%;
+
+    .button {
+      height: 100%;
+      width: 10%;
+      bottom: 0%;
+      align-items: flex-end;
+    }
+
+    .interactions {
+      .inputs {
+        justify-content: flex-start;
+        min-height: 150px;
+      }
+    }
+    textarea {
+      min-height: 120px;
+    }
+  }
+
+  @media (max-width: 426px) {
+    .textarea {
+      display: none;
+    }
   }
 
   /* @media (max-width: 768px) {
-    width: 129.5px;
-    height: 129.5px;
-    margin-top: 0px;
-  }
-
-  @media (max-width: 768px) {
     width: 129.5px;
     height: 129.5px;
     margin-top: 0px;

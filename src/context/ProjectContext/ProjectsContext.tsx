@@ -21,7 +21,7 @@ export const ProjectProvider = ({ children }: IChildren) => {
 
         setProjects(
           responseGitHub.data.filter((elem: any) => {
-            return elem.name !== "mariolucass";
+            return elem.name !== "mariolucass" && elem.name !== "MeuPortfolio";
           })
         );
         console.log(responseGitHub.data);

@@ -6,15 +6,18 @@ export const TextArea = ({
   placeholder,
   children,
   id,
-  register,
+  setState,
 }: ITextAreaProps) => (
-  <styled.LabelStyled htmlFor={id}>
+  <styled.LabelStyled htmlFor={id} className="textarea">
     {children}
 
     <styled.TextAreaStyled
+      className="textarea"
       placeholder={placeholder}
       id={id}
-      {...register(id)}
+      onChange={(elem) => {
+        setState(elem.target.value);
+      }}
     />
   </styled.LabelStyled>
 );

@@ -9,9 +9,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 import { RiSendPlaneFill, RiFeedbackLine } from "react-icons/ri";
 import { IForm } from "../../../interfaces/global/globalInterfaces";
-import { apiMain } from "../../../services/api";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 export const FormDashboard = () => {
+  const [message, setMessage] = useState("");
+
   const {
     register,
     handleSubmit,
@@ -19,53 +22,68 @@ export const FormDashboard = () => {
   } = useForm<IForm>({ resolver: yupResolver(validations.FormSchema) });
 
   const postApi = async (data: IForm) => {
-    try {
-      await apiMain.post("/messages", { ...data });
-    } catch (error) {
-      console.log(error);
+    if (message.length !== 0 && message.length < 200) {
+      try {
+        const templateParams = {
+          from_name: data.name,
+          message: message,
+          email: data.email,
+        };
+
+        const response = await emailjs.send(
+          "service_jcwtyig",
+          "template_8phazkt",
+          templateParams,
+          "7YS0dymsooXL9f8LZ"
+        );
+
+        console.log(response.status, response.text, "Email enviado");
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
   return (
-    <styled.Form
-      onSubmit={() => {
-        handleSubmit(postApi);
-      }}
-    >
+    <styled.Form onSubmit={handleSubmit(postApi)}>
       <motion.div className="title">
         <RiFeedbackLine size={35} />
 
         <motion.h2>Entre em contato!</motion.h2>
       </motion.div>
 
-      <components.Input
-        type="text"
-        id="name"
-        placeholder="Coloque seu nome aqui."
-        register={register}
-      >
-        Nome:
-      </components.Input>
-      {errors.email && <motion.span></motion.span>}
+      <motion.div className="interactions">
+        <motion.div className="inputs">
+          <components.Input
+            type="text"
+            id="name"
+            placeholder="Coloque seu nome aqui."
+            register={register}
+          >
+            Nome:
+          </components.Input>
+          {errors.email && <motion.span></motion.span>}
 
-      <components.Input
-        type="text"
-        id="email"
-        placeholder="Coloque seu e-mail aqui."
-        register={register}
-      >
-        E-mail:
-      </components.Input>
-      {errors.name && <motion.span></motion.span>}
+          <components.Input
+            type="text"
+            id="email"
+            placeholder="Coloque seu e-mail aqui."
+            register={register}
+          >
+            E-mail:
+          </components.Input>
+          {errors.name && <motion.span></motion.span>}
+        </motion.div>
 
-      <components.TextArea
-        id="message"
-        placeholder="Coloque seu e-mail aqui."
-        register={register}
-      >
-        Mensagem:
-      </components.TextArea>
-      {errors.message && <motion.span></motion.span>}
+        <components.TextArea
+          id="message"
+          placeholder="Coloque sua mensagem aqui."
+          setState={setMessage}
+        >
+          Mensagem:
+        </components.TextArea>
+        {errors.message && <motion.span></motion.span>}
+      </motion.div>
 
       <motion.div className="button">
         <components.Button type="submit">

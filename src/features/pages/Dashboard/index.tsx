@@ -83,11 +83,8 @@ export const Dashboard = () => {
         </motion.div>
       </styled.SectionTechs>
 
-      <styled.SectionProjects ref={ref2}>
-        <motion.div
-          className="mainDiv"
-          transition={transitions.transitionSpring}
-        >
+      <styled.SectionProjects ref={ref2} style={style3(isInView2)}>
+        <motion.div className="mainDiv">
           <layouts.ProjectsImageList />
 
           <motion.div className="linkProjects">
