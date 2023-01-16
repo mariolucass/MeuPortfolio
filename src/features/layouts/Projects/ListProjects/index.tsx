@@ -1,14 +1,19 @@
 import * as styled from "./styles";
+import * as layouts from "../../";
 import * as animations from "../../../libs/FramerMotion/animations";
 import * as transitions from "../../../libs/FramerMotion/transitions";
 import * as database from "../../../database";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+
+import { motion, useInView } from "framer-motion";
 
 import { useProjectContext } from "../../../../context/ProjectContext/ProjectsContext";
 
 export const ListProjects = () => {
   const { projects } = useProjectContext();
+  const ref = useRef(null);
+  const isInView = useInView(ref);
 
   console.log(projects);
 
@@ -41,7 +46,7 @@ export const ListProjects = () => {
               <motion.path d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" />
             </motion.svg>
 
-            <motion.h3>{item.name}</motion.h3>
+            <layouts.AnimatedText text={item.name} inView={isInView} />
             <motion.div className="header_image">
               <motion.img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
@@ -112,6 +117,7 @@ export const ListProjects = () => {
       initial={animations.animateHidden}
       animate={animations.animateShowing}
       transition={transitions.transitionAccordion}
+      ref={ref}
     >
       {liProjects}
     </styled.ProjectList>

@@ -33,7 +33,7 @@ export const textVariant = {
 export const letterVariant = {
   hidden: {
     opacity: 0,
-    y: `0.5em`,
+    y: `1.5em`,
   },
   visible: {
     opacity: 1,

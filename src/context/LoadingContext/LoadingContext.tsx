@@ -14,7 +14,7 @@ export const LoadingProvider = ({ children }: IChildren) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 200);
+    }, 450);
   }, []);
 
   useEffect(() => {

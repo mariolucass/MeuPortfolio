@@ -23,9 +23,7 @@ export const ProjectProvider = ({ children }: IChildren) => {
             return elem.name !== "mariolucass" && elem.name !== "MeuPortfolio";
           })
         );
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     };
 
     loadProjects();

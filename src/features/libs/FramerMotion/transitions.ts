@@ -12,7 +12,7 @@ export const transitionSpring = {
 };
 
 export const transitionLetter = {
-  duration: 1,
+  duration: 1.5,
   ease: [0.2, 0.65, 0.3, 0.9],
 };
 

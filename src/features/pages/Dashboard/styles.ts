@@ -1,6 +1,7 @@
-import { Stars } from "./../../../assets/images/backgrounds/stars";
 import { motion } from "framer-motion";
 import styled from "styled-components";
+
+import { Stars } from "./../../../assets/images/backgrounds/stars";
 
 export const Main = styled(motion.main)`
   width: 100%;

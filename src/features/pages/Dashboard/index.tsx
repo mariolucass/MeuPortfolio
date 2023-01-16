@@ -13,12 +13,10 @@ import { motion, useInView } from "framer-motion";
 import Profile from "../../../assets/images/me/profile.jpeg";
 
 export const Dashboard = () => {
-  const ref = useRef(null);
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
 
-  const isInView = useInView(ref);
   const isInView1 = useInView(ref1);
   const isInView2 = useInView(ref2);
   const isInView3 = useInView(ref3);
@@ -40,7 +38,7 @@ export const Dashboard = () => {
 
       <layouts.Welcome />
 
-      <styled.SectionAbout ref={ref}>
+      <styled.SectionAbout>
         <motion.div className="profile">
           <motion.img src={Profile} alt="Profile" />
         </motion.div>

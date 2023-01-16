@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { IListMedias } from "../../features/interfaces/components/ListMedias";
 
-export const ListMedias = ({ list }: any) => {
-  const liMedia = list.map((elem: any) => (
+export const ListMedias = ({ list }: IListMedias) => {
+  const liMedia = list.map((elem) => (
     <motion.li key={elem.id}>
       <motion.div>
         <motion.a href={elem.linkedin} target="_blank">

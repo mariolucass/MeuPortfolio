@@ -8,7 +8,7 @@ export const WelcomeDiv = styled(motion.div)`
   display: flex;
   align-items: left;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 
   position: relative;
   right: 0%;

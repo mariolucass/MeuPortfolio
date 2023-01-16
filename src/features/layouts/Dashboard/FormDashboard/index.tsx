@@ -25,7 +25,7 @@ export const FormDashboard = () => {
     if (message.length < 200) {
       try {
         const mensagem2 =
-          "Olá gostaria de conhece-lo melhor Mário, aqui estão minhas informacões";
+          "Olá, gostaria de conhecê-lo melhor Mário, aqui estão minhas informações...";
 
         const templateParams = {
           from_name: data.name,
@@ -33,17 +33,13 @@ export const FormDashboard = () => {
           email: data.email,
         };
 
-        const response = await emailjs.send(
+        await emailjs.send(
           "service_jcwtyig",
           "template_8phazkt",
           templateParams,
           "7YS0dymsooXL9f8LZ"
         );
-
-        console.log(response.status, response.text, "Email enviado");
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     }
   };
 

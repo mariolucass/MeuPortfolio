@@ -1,8 +1,6 @@
 import * as styled from "./styles";
 import * as databases from "../../../database";
 
-import { motion } from "framer-motion";
-
 import { useProjectContext } from "../../../../context/ProjectContext/ProjectsContext";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,7 +8,6 @@ import { Autoplay, EffectCreative } from "swiper";
 
 export const ProjectsImageList = () => {
   const { projects } = useProjectContext();
-  console.log(projects);
 
   const imgList = projects.map((item) => {
     const elem = databases.Projects.listImg.find(
