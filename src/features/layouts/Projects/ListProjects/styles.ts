@@ -83,9 +83,27 @@ export const ProjectList = styled(motion.ul)`
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 660px) {
     li {
-      height: 31.5%;
+      width: 100%;
+      height: 35%;
+    }
+  }
+
+  @media (max-width: 495px) {
+    li {
+      width: 100%;
+      min-height: 225px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .header_div {
+      align-items: center;
+
+      img {
+        display: none;
+      }
     }
   }
 `;
@@ -183,6 +201,7 @@ export const HeaderDiv = styled(motion.div)`
     width: 24px;
     height: 24px;
     display: flex;
+    margin-right: 35px;
 
     img {
       width: 100%;

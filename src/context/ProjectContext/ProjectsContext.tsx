@@ -18,13 +18,11 @@ export const ProjectProvider = ({ children }: IChildren) => {
     const loadProjects = async () => {
       try {
         const responseGitHub = await apiGitHub.get("/mariolucass/repos");
-
         setProjects(
           responseGitHub.data.filter((elem: any) => {
             return elem.name !== "mariolucass" && elem.name !== "MeuPortfolio";
           })
         );
-        console.log(responseGitHub.data);
       } catch (error) {
         console.log(error);
       }

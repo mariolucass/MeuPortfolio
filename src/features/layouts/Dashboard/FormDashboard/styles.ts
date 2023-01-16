@@ -78,44 +78,68 @@ export const Form = styled(motion.form)`
   }
 
   button {
+    min-width: 72px;
+    min-height: 72px;
+
     position: sticky;
   }
 
   @media (max-width: 769px) {
-    flex-direction: row;
-    width: 95%;
-    gap: 0.6em;
-    align-items: flex-start;
-    padding: 0.5em;
+    width: 80%;
     height: 90%;
 
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+
+    gap: 1em;
+    padding: 0.5em;
+
+    .title {
+      svg {
+        display: none;
+      }
+
+      h2 {
+        padding: 0.5em;
+      }
+
+      width: 30%;
+    }
+
     .button {
-      height: 100%;
-      width: 10%;
-      bottom: 0%;
+      width: 1%;
+
       align-items: flex-end;
+
+      position: relative;
+      top: 100px;
+      right: 15px;
     }
 
     .interactions {
+      width: 45%;
+
+      align-items: center;
+
       .inputs {
-        justify-content: flex-start;
         min-height: 150px;
+
+        justify-content: flex-start;
+
+        margin-bottom: 10px;
+
+        input {
+          width: 170px;
+        }
       }
     }
-    textarea {
-      min-height: 120px;
-    }
-  }
 
-  @media (max-width: 426px) {
     .textarea {
       display: none;
     }
   }
 
-  /* @media (max-width: 768px) {
-    width: 129.5px;
-    height: 129.5px;
-    margin-top: 0px;
-  } */
+  @media (max-width: 426px) {
+  }
 `;

@@ -100,12 +100,19 @@ export const TextDiv = styled(motion.div)`
 
   @media (max-width: 1440px) {
     .paragraph {
-      min-height: 80%;
+      width: 45%;
+      min-height: 100px;
+    }
+
+    .principalName {
+      width: 45%;
     }
   }
+
   @media (max-width: 1024px) {
     .paragraph {
       width: 75%;
+      min-height: 100px;
     }
 
     .principalName {
@@ -123,8 +130,9 @@ export const TextDiv = styled(motion.div)`
     }
   }
 
-  @media (max-width: 471px) {
+  @media (max-width: 550px) {
     width: 100%;
+
     .paragraph {
       width: 100%;
       min-height: 40%;

@@ -353,7 +353,7 @@ export const SectionAbout = styled(motion.section)`
 
   @media (max-width: 767px) {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.6rem;
 
     .biography {
       width: 100%;
@@ -365,6 +365,10 @@ export const SectionAbout = styled(motion.section)`
 
       .textArea {
         width: 100%;
+        h2 {
+          min-width: 100px;
+          font-size: 0.85em;
+        }
       }
 
       .mediaArea {
@@ -392,30 +396,8 @@ export const SectionAbout = styled(motion.section)`
         gap: 0.5rem;
 
         h2 {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-direction: column;
-
-          gap: 1rem;
-          padding: 0.4em;
-          padding-top: 0.8em;
-          padding-bottom: 0;
-
-          background-color: var(--primary-color);
-
-          border-radius: 1em 1em 0 0;
-
-          div {
-            width: 100%;
-            max-height: 10px;
-
-            padding: 0;
-
-            background-color: var(--secondary-color);
-
-            border-radius: 1em 1em 0 0;
-          }
+          min-width: 100px;
+          font-size: 0.85em;
         }
 
         ul {
@@ -613,7 +595,7 @@ export const SectionForm = styled(motion.section)`
 
     border-radius: 15em 0 0 15em;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 769px) {
     flex-direction: column;
   }
 `;

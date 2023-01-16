@@ -8,7 +8,7 @@ export const PrincipalDiv = styled(motion.div)`
   align-items: center;
   justify-content: center;
 
-  margin: 3.5% 0;
+  margin-bottom: 10px;
 
   cursor: pointer;
 

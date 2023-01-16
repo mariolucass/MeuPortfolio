@@ -34,7 +34,7 @@ export const Welcome = () => {
 
             <TypeAnimation
               sequence={[
-                ` Experiência em React, JavaScript e procurando emprego na área de Front-End, tenho como objetivo superar obstáculos, adquirir conhecimentos e resolver problemas.`,
+                `Experiência sólida em HTML, CSS, JavaScript, além de frameworks como React.Meus objetivos são: adquirir conhecimentos de forma gradual e me aperfeicoar nas minhas habilidades.`,
                 200,
               ]}
               speed={40}

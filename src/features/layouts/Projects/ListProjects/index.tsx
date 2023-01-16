@@ -10,6 +10,8 @@ import { useProjectContext } from "../../../../context/ProjectContext/ProjectsCo
 export const ListProjects = () => {
   const { projects } = useProjectContext();
 
+  console.log(projects);
+
   const liProjects = projects.map((item) => {
     const elem = database.Projects.listImg.find(
       (elem) => elem.name === item.name
@@ -41,14 +43,36 @@ export const ListProjects = () => {
 
             <motion.h3>{item.name}</motion.h3>
             <motion.div className="header_image">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
+              <motion.img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
                 alt=""
               />
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
-                alt=""
-              />
+
+              {database.Projects.listVercel.find(
+                (e) => e.name === item.name
+              ) ? (
+                <>
+                  <motion.img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                    alt=""
+                  />
+                  <motion.img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"
+                    alt=""
+                  />
+                </>
+              ) : (
+                <>
+                  <motion.img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
+                    alt=""
+                  />
+                  <motion.img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+                    alt=""
+                  />
+                </>
+              )}
             </motion.div>
           </styled.HeaderDiv>
 

@@ -22,11 +22,14 @@ export const FormDashboard = () => {
   } = useForm<IForm>({ resolver: yupResolver(validations.FormSchema) });
 
   const postApi = async (data: IForm) => {
-    if (message.length !== 0 && message.length < 200) {
+    if (message.length < 200) {
       try {
+        const mensagem2 =
+          "Olá gostaria de conhece-lo melhor Mário, aqui estão minhas informacões";
+
         const templateParams = {
           from_name: data.name,
-          message: message,
+          message: message.length ? message : mensagem2,
           email: data.email,
         };
 
