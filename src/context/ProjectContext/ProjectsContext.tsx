@@ -5,6 +5,7 @@ import { IProjectContext } from "../../features/interfaces/contexts/ProjectConte
 import { IProject } from "../../features/interfaces/database/ListProjects";
 
 import { apiGitHub } from "../../features/services/api";
+import { Projects } from "../../features/database";
 
 export const ProjectContext = createContext<IProjectContext>(
   {} as IProjectContext
@@ -12,29 +13,23 @@ export const ProjectContext = createContext<IProjectContext>(
 
 export const ProjectProvider = ({ children }: IChildren) => {
   const [projects, setProjects] = useState<IProject[]>([] as IProject[]);
-  const [loaderProjects, setLoaderProjects] = useState(false);
 
   useEffect(() => {
     const loadProjects = async () => {
       try {
         const responseGitHub = await apiGitHub.get("/mariolucass/repos");
         setProjects(
-          responseGitHub.data.filter((elem: any) => {
-            return elem.name !== "mariolucass" && elem.name !== "MeuPortfolio";
-          })
+          responseGitHub.data.filter(
+            (elem: any) => !Projects.listHidden.includes(elem.name)
+          )
         );
       } catch (error) {}
     };
-
     loadProjects();
   }, []);
 
-  useEffect(() => {}, [loaderProjects]);
-
   return (
-    <ProjectContext.Provider
-      value={{ projects, setProjects, loaderProjects, setLoaderProjects }}
-    >
+    <ProjectContext.Provider value={{ projects, setProjects }}>
       {children}
     </ProjectContext.Provider>
   );

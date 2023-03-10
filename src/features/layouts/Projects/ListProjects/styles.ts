@@ -176,11 +176,23 @@ export const HeaderDiv = styled(motion.div)`
   transition: 0.2s ease-in-out;
 
   h3 {
-    margin: 0 0 0.3em;
+    height: 8%;
 
-    font-size: 1em;
-
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 1px;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
     color: var(--white-color);
+
+    border-radius: 1em 1em 0 0;
+
+    padding-bottom: 0;
+    padding: 0.4em;
+    padding-top: 0.8em;
+    gap: 1rem;
+    margin: 0 0 0.3em;
   }
 
   svg {
@@ -239,8 +251,10 @@ export const DescriptionDiv = styled(motion.div)`
   background-color: var(--primary-color);
 
   p {
-    text-align: start;
-    text-overflow: ellipsis;
     width: 75%;
+    max-height: 60px;
+    text-align: start;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `;

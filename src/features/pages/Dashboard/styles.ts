@@ -109,6 +109,13 @@ export const Main = styled(motion.main)`
 
       h2 {
         height: 8%;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--white-color);
+        text-transform: uppercase;
+        word-spacing: 1px;
+        letter-spacing: 2px;
       }
 
       /* div {

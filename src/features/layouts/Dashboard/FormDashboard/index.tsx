@@ -1,16 +1,14 @@
 import * as styled from "./styles";
 import * as components from "../../../../components";
 import * as validations from "../../../validations";
-
 import { motion } from "framer-motion";
-
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-
 import { RiSendPlaneFill, RiFeedbackLine } from "react-icons/ri";
 import { IForm } from "../../../interfaces/global/globalInterfaces";
-import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
 
 export const FormDashboard = () => {
   const [message, setMessage] = useState("");
@@ -18,27 +16,30 @@ export const FormDashboard = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<IForm>({ resolver: yupResolver(validations.FormSchema) });
 
   const postApi = async (data: IForm) => {
     if (message.length < 200) {
       try {
-        const mensagem2 =
+        const messageDefault =
           "Olá, gostaria de conhecê-lo melhor Mário, aqui estão minhas informações...";
 
+        const { name, email } = data;
         const templateParams = {
-          from_name: data.name,
-          message: message.length ? message : mensagem2,
-          email: data.email,
+          from_name: name,
+          email: email,
+          message: message.length ? message : messageDefault,
         };
-
         await emailjs.send(
           "service_jcwtyig",
           "template_8phazkt",
           templateParams,
           "7YS0dymsooXL9f8LZ"
         );
+        toast.success("Muito obrigado, seu email enviado com sucesso!");
+        reset();
       } catch (error) {}
     }
   };

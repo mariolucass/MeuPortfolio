@@ -68,7 +68,7 @@ export const TextDiv = styled(motion.div)`
 
   .paragraph {
     width: 35%;
-    min-height: 50%;
+    min-height: 275px;
 
     display: flex;
     flex-direction: column;
@@ -136,6 +136,14 @@ export const TextDiv = styled(motion.div)`
     .paragraph {
       width: 100%;
       min-height: 40%;
+
+      h2 {
+        font-size: 1.1em;
+      }
+
+      p {
+        font-size: 0.95em;
+      }
     }
 
     .principalName {

@@ -14,15 +14,7 @@ export const AboutParticulars = () => {
 
   const renderList = list.map((elem) => (
     <motion.li key={elem}>
-      <styled.LeftDiv />
-
-      <styled.LeftDiv2 />
-
       <motion.span>{elem}</motion.span>
-
-      <styled.RightDiv2 />
-
-      <styled.RightDiv />
     </motion.li>
   ));
 

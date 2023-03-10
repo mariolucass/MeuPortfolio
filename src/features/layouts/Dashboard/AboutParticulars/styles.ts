@@ -51,18 +51,17 @@ export const listParticulars = styled(motion.ul)`
     }
 
     span {
-      width: 80%;
-      height: 40%;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      font-size: 1em;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white-color);
+      text-transform: uppercase;
+      word-spacing: 1px;
+      letter-spacing: 2px;
     }
 
     :hover {
-      transform: translateY(20px);
+      transform: scale(0.92);
 
       transition: 0.4s ease-out;
     }

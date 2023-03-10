@@ -9,19 +9,12 @@ export const LoadingContext = createContext<ILoadingContext>(
 
 export const LoadingProvider = ({ children }: IChildren) => {
   const [loading, setLoading] = useState(true);
-  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 450);
+    }, 200);
   }, []);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading((loading) => !loading);
-    }, 100);
-  }, [loader]);
 
   return (
     <LoadingContext.Provider value={{ loading, setLoading }}>

@@ -44,4 +44,12 @@ export class Projects {
       url: "https://live.staticflickr.com/65535/52617313723_16f3d42be4_b.jpg",
     },
   ];
+
+  static listHidden = [
+    "mariolucass",
+    "MeuPortfolio",
+    "ImoveisTORM",
+    "LanchesSQL",
+    "CRUD-Usuario-Admin",
+  ];
 }
