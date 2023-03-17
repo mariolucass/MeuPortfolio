@@ -41,3 +41,36 @@ export const letterVariant = {
     transition: transitions.transitionLetter,
   },
 };
+
+export const techsVariant = {
+  open: {
+    opacity: 1,
+    scale: 1,
+    display: "block",
+    duration: 0.5,
+
+    transition: {
+      type: "spring",
+      bounce: 0,
+      duration: 1,
+      delayChildren: 0.3,
+      staggerChildren: 0.05,
+    },
+  },
+  closed: {
+    opacity: 0,
+    scale: 0.3,
+    duration: 0.5,
+
+    transition: {
+      type: "spring",
+      bounce: 0,
+    },
+
+    transitionEnd: {
+      type: "spring",
+      stiffness: 100,
+      display: "none",
+    },
+  },
+};

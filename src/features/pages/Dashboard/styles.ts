@@ -117,24 +117,6 @@ export const Main = styled(motion.main)`
         word-spacing: 1px;
         letter-spacing: 2px;
       }
-
-      /* div {
-        width: 45%;
-        height: 10%;
-
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-        padding: 1.5em;
-
-        position: relative;
-        bottom: 0%;
-
-        background-color: var(--secondary-color);
-
-        border-radius: 0.7em 0.7em 0em 0em;
-      } */
     }
 
     @media (max-width: 767px) {
@@ -472,23 +454,6 @@ export const SectionTechs = styled(motion.section)`
     );
 
     border-radius: 0 15em 15em 0;
-
-    div {
-      width: 75%;
-      height: 65%;
-
-      img {
-        width: 100%;
-        height: 100%;
-
-        object-fit: cover;
-
-        border-radius: 1em;
-
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-      }
-    }
   }
 
   @media (max-width: 767px) {

@@ -39,7 +39,7 @@ export const listParticulars = styled(motion.ul)`
     border-right: 0px;
 
     transition: 0.4s ease-out;
-    cursor: pointer;
+    cursor: default;
 
     svg {
       width: 25%;

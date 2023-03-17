@@ -18,10 +18,6 @@ export const AboutInfo = () => (
         <motion.h4>E-MAIL:</motion.h4>
         <motion.span>mariolasdev@gmail.com</motion.span>
       </motion.li>
-      <motion.li>
-        <motion.h4>DATA DE NASCIMENTO:</motion.h4>
-        <motion.span>25/07/2002</motion.span>
-      </motion.li>
     </styled.listInfo>
   </>
 );

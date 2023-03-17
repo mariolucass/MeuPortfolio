@@ -51,6 +51,7 @@ export const TextDiv = styled(motion.div)`
   padding: 0.2rem;
   margin-left: 5em;
   margin: 6.5% 0;
+  cursor: default;
 
   .principalName {
     width: 35%;
@@ -74,6 +75,7 @@ export const TextDiv = styled(motion.div)`
     flex-direction: column;
     align-items: left;
     text-align: center;
+    gap: 0.6rem;
 
     padding: 0.7em;
 

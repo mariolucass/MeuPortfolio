@@ -30,7 +30,7 @@ export const Welcome = () => {
           </motion.div>
 
           <motion.div className="paragraph">
-            <motion.h2>Desenvolvedor Front-End.</motion.h2>
+            <motion.h2>Desenvolvedor Full-Stack.</motion.h2>
 
             <TypeAnimation
               sequence={[

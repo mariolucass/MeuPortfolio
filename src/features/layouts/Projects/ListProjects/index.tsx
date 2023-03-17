@@ -5,36 +5,87 @@ import * as transitions from "../../../libs/FramerMotion/transitions";
 import * as database from "../../../database";
 
 import { useRef } from "react";
-
 import { motion, useInView } from "framer-motion";
-
 import { useProjectContext } from "../../../../context/ProjectContext/ProjectsContext";
+interface ListProjectsProps {
+  filter: string;
+}
 
-export const ListProjects = () => {
+export const ListProjects = ({ filter }: ListProjectsProps) => {
   const { projects } = useProjectContext();
   const ref = useRef(null);
   const isInView = useInView(ref);
 
-  console.log(projects);
-
   const liProjects = projects.map((item) => {
-    const elem = database.Projects.listImg.find(
+    const elemExists = database.Projects.listImg.find(
       (elem) => elem.name === item.name
     );
-
-    if (elem) {
-      item.img = elem.url;
+    if (elemExists) {
+      item.img = elemExists.url;
     }
 
     if (!item.has_pages) {
-      const elem = database.Projects.listVercel.find(
+      const elemHasVercel = database.Projects.listVercel.find(
+        (elem) => elem.name === item.name
+      );
+      if (elemHasVercel) {
+        item.vercel = elemHasVercel.url;
+      }
+    }
+
+    const findImageUrlTech = (elemName: string) => {
+      const elem = database.Techs.find((elem) => elem.name === elemName);
+      return elem!.img;
+    };
+
+    const renderTechs = () => {
+      const listVercel = database.Projects.listVercel;
+
+      const isVercelElement = listVercel.find(
         (elem) => elem.name === item.name
       );
 
-      if (elem) {
-        item.vercel = elem.url;
+      if (isVercelElement) {
+        return (
+          <>
+            <motion.img src={findImageUrlTech("HTML5")} alt="HTML5" />
+            <motion.img src={findImageUrlTech("React")} alt="React" />
+            <motion.img src={findImageUrlTech("TypeScript")} alt="TypeScript" />
+          </>
+        );
+      } else {
+        return (
+          <>
+            <motion.img src={findImageUrlTech("HTML5")} alt="HTML5" />
+            <motion.img src={findImageUrlTech("CSS3")} alt="CSS3" />
+            <motion.img src={findImageUrlTech("JavaScript")} alt="JavaScript" />
+          </>
+        );
       }
-    }
+    };
+
+    const renderPageUrl = () => {
+      if (item.has_pages) {
+        return (
+          <styled.LinkStyled1
+            href={`https://mariolucass.github.io/${item.name}/`}
+            target={"_blank"}
+          >
+            Página
+          </styled.LinkStyled1>
+        );
+      } else {
+        return (
+          <styled.LinkStyled1 href={item.vercel} target={"_blank"}>
+            Página
+          </styled.LinkStyled1>
+        );
+      }
+    };
+
+    const itemDescription = item.description
+      ? item.description
+      : "Esse item ainda não tem descricão.";
 
     return (
       <motion.li key={item.id} whileHover={{ scale: 0.9 }}>
@@ -47,61 +98,14 @@ export const ListProjects = () => {
             </motion.svg>
 
             <layouts.AnimatedText text={item.name} inView={isInView} />
-            <motion.div className="header_image">
-              <motion.img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
-                alt=""
-              />
-
-              {database.Projects.listVercel.find(
-                (e) => e.name === item.name
-              ) ? (
-                <>
-                  <motion.img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                    alt=""
-                  />
-                  <motion.img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"
-                    alt=""
-                  />
-                </>
-              ) : (
-                <>
-                  <motion.img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
-                    alt=""
-                  />
-                  <motion.img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
-                    alt=""
-                  />
-                </>
-              )}
-            </motion.div>
+            <motion.div className="header_image">{renderTechs()}</motion.div>
           </styled.HeaderDiv>
 
           <styled.DescriptionDiv>
-            <motion.p>
-              {item.description
-                ? item.description
-                : "Esse item ainda não tem descricão."}
-            </motion.p>
+            <motion.p>{itemDescription}</motion.p>
 
             <styled.LinksDiv>
-              {item.has_pages ? (
-                <styled.LinkStyled1
-                  href={`https://mariolucass.github.io/${item.name}/`}
-                  target={"_blank"}
-                >
-                  Página
-                </styled.LinkStyled1>
-              ) : (
-                <styled.LinkStyled1 href={item.vercel} target={"_blank"}>
-                  Página
-                </styled.LinkStyled1>
-              )}
-
+              {renderPageUrl()}
               <styled.LinkStyled1 href={item.svn_url} target={"_blank"}>
                 Repositório
               </styled.LinkStyled1>

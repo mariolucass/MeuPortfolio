@@ -4,6 +4,7 @@ export const transitionSpring = {
     ease: [0, 0.71, 0.2, 1.01],
   },
   scale: {
+    duration: 0.3,
     type: "spring",
     damping: 4,
     stiffness: 100,
@@ -13,11 +14,13 @@ export const transitionSpring = {
 
 export const transitionLetter = {
   duration: 1.5,
+  type: "spring",
   ease: [0.2, 0.65, 0.3, 0.9],
 };
 
 export const transitionText = {
   delay: 1,
+  type: "spring",
   staggerChildren: 0.08,
 };
 
