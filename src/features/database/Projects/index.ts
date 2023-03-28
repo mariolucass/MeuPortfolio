@@ -43,13 +43,80 @@ export class Projects {
       name: "ProjetoRedeSocial",
       url: "https://live.staticflickr.com/65535/52617313723_16f3d42be4_b.jpg",
     },
+    {
+      name: "ProjetoFullStack-FrontEnd",
+      url: "https://live.staticflickr.com/65535/52774679511_3e8e0c2857_k.jpg",
+    },
   ];
 
   static listHidden = [
     "mariolucass",
     "MeuPortfolio",
-    "ImoveisTORM",
-    "LanchesSQL",
-    "CRUD-Usuario-Admin",
+    "EntregaKenzie1",
+    "ProjetoFullStack-Docs",
+  ];
+
+  static listBackEnd = [
+    "API-PetCare",
+    "API-Quiosque",
+    "API-CRUD-Usuario-Admin",
+    "ProjetoFullStack-BackEnd",
+    "API-LanchesSQL",
+    "API-Copa",
+    "API-ImoveisTORM",
+    "API-BlockBuster",
+    "API-BandHub",
+    "API-MotionPicture",
+    "API-Ecommerce",
+  ];
+
+  static listExpress = [
+    "API-ImoveisTORM",
+    "API-LanchesSQL",
+    "API-CRUD-Usuario-Admin",
+    "ProjetoFullStack-BackEnd",
+  ];
+
+  static listDiagrams = [
+    {
+      name: "API-ImoveisTORM",
+      url: "",
+    },
+    {
+      name: "API-LanchesSQL",
+      url: "",
+    },
+    {
+      name: "API-CRUD-Usuario-Admin",
+      url: "",
+    },
+    {
+      name: "ProjetoFullStack-BackEnd",
+      url: "",
+    },
+    {
+      name: "API-Quiosque",
+      url: "",
+    },
+    {
+      name: "API-Copa",
+      url: "",
+    },
+    {
+      name: "API-PetCare",
+      url: "",
+    },
+    {
+      name: "API-BlockBuster",
+      url: "",
+    },
+    {
+      name: "API-MotionPicture",
+      url: "",
+    },
+    {
+      name: "API-Ecommerce",
+      url: "",
+    },
   ];
 }

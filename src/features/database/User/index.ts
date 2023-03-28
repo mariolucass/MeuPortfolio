@@ -6,6 +6,6 @@ export const Users = [
     linkedin: "https://www.linkedin.com/in/mariolucass/",
     github: "https://github.com/mariolucass",
     curriculo:
-      "https://drive.google.com/file/d/1OWKpBJMqs4qslk6M1uHUJ5zpxeDo9-PD/view?usp=sharing",
+      "https://drive.google.com/file/d/1GYtCU_5zShWpkSXKNglUuW04zHWojMFb/view?usp=sharing",
   },
 ];

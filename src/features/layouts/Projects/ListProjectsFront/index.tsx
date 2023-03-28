@@ -1,5 +1,5 @@
 import * as styled from "./styles";
-import * as layouts from "../../";
+import * as layouts from "../..";
 import * as animations from "../../../libs/FramerMotion/animations";
 import * as transitions from "../../../libs/FramerMotion/transitions";
 import * as database from "../../../database";
@@ -7,21 +7,27 @@ import * as database from "../../../database";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useProjectContext } from "../../../../context/ProjectContext/ProjectsContext";
-interface ListProjectsProps {
-  filter: string;
-}
 
-export const ListProjects = ({ filter }: ListProjectsProps) => {
+export const ListProjectsFrontEnd = () => {
   const { projects } = useProjectContext();
   const ref = useRef(null);
   const isInView = useInView(ref);
+  const defaultImage =
+    "https://live.staticflickr.com/65535/52775566948_f4ca9647f6_k.jpg";
 
-  const liProjects = projects.map((item) => {
+  const listWithoutBackEnd = projects.filter((item) => {
+    return !database.Projects.listBackEnd.find((elem) => elem === item.name);
+  });
+
+  const liProjects = listWithoutBackEnd.map((item) => {
     const elemExists = database.Projects.listImg.find(
       (elem) => elem.name === item.name
     );
+
     if (elemExists) {
       item.img = elemExists.url;
+    } else {
+      item.img = defaultImage;
     }
 
     if (!item.has_pages) {
