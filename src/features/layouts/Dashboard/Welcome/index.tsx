@@ -1,7 +1,7 @@
-import * as styled from "./styles";
 import * as layouts from "../..";
-import * as transitions from "../../../libs/FramerMotion/transitions";
 import * as animations from "../../../libs/FramerMotion/animations";
+import * as transitions from "../../../libs/FramerMotion/transitions";
+import * as styled from "./styles";
 
 import { motion } from "framer-motion";
 
@@ -34,7 +34,7 @@ export const Welcome = () => {
 
             <TypeAnimation
               sequence={[
-                `Experiência sólida em HTML, CSS, JavaScript, além de frameworks como React. Meus objetivos são: adquirir conhecimentos de forma gradual e me aperfeiçoar nas minhas habilidades.`,
+                `Desenvolvedor full stack com experiência em JavaScript, TypeScript, React, Node.js, Express, PostgreSQL, Git e metodologias ágeis como Scrum e Kanban. Também possuo conhecimentos em UX, TDD com Jest e construção de APIs RESTful.`,
                 200,
               ]}
               speed={40}

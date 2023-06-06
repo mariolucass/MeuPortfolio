@@ -4,12 +4,16 @@ export class Projects {
     { name: "KenzieHub", url: "https://kenziehub-henna-seven.vercel.app" },
     { name: "NuKenzie", url: "https://nukenzie-wheat.vercel.app" },
     { name: "RentalWife", url: "https://rental-wife-blue.vercel.app" },
+    {
+      name: "MotorsShop",
+      url: "https://frontend-g30-t13-m6.vercel.app/dashboard",
+    },
   ];
 
   static listImg = [
     {
       name: "BurguerKenzie",
-      url: "https://live.staticflickr.com/65535/52616062139_698c62722e_b.jpg",
+      url: "https://live.staticflickr.com/65535/52955768313_6d3e546da9_h.jpg",
     },
     {
       name: "KenzieHub",
@@ -47,6 +51,10 @@ export class Projects {
       name: "ProjetoFullStack-FrontEnd",
       url: "https://live.staticflickr.com/65535/52774679511_3e8e0c2857_k.jpg",
     },
+    {
+      name: "MotorsShop",
+      url: "https://live.staticflickr.com/65535/52954720457_a781d0e6ef_h.jpg",
+    },
   ];
 
   static listHidden = [
@@ -54,6 +62,7 @@ export class Projects {
     "MeuPortfolio",
     "EntregaKenzie1",
     "ProjetoFullStack-Docs",
+    "DOC-Rental-Wife",
   ];
 
   static listBackEnd = [
@@ -68,6 +77,8 @@ export class Projects {
     "API-BandHub",
     "API-MotionPicture",
     "API-Ecommerce",
+    "API-Rental-Wife",
+    "API-MotorsShop",
   ];
 
   static listExpress = [
@@ -75,6 +86,8 @@ export class Projects {
     "API-LanchesSQL",
     "API-CRUD-Usuario-Admin",
     "ProjetoFullStack-BackEnd",
+    "API-Rental-Wife",
+    "API-MotorsShop",
   ];
 
   static listDiagrams = [
